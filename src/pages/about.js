@@ -4,16 +4,17 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
-const IndexPage = () => {
+const AboutPage = () => {
   return (
     <Layout>
-      <Head title="Home" />
-      <h2>Coding & Visualizing</h2>
+      <Head title="About" />
+      <h1>About</h1>
+      <h2>John Doe</h2>
       <p>
-        Need a developer? <Link to="/contact">Contact me</Link>
+        Do you want to <Link to="/contact">contact me</Link>
       </p>
     </Layout>
   )
 }
 
-export default IndexPage
+export default AboutPage
