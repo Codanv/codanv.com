@@ -9,9 +9,12 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <h1>About</h1>
-      <h2>John Doe</h2>
       <p>
-        Do you want to <Link to="/contact">contact me</Link>
+      Our ambition is to effectively model real-world objects/situations to software objects/programs by designing, coding, analysing and visualizing.
+
+      In order to do so, we need to have the right mindset and specific domain knowledge.
+
+      Let's continue the endeavour...
       </p>
     </Layout>
   )
