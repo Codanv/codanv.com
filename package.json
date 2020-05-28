@@ -17,6 +17,8 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.37",
+    "gatsby-plugin-manifest": "^2.4.9",
+    "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.9",
