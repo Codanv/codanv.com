@@ -1,14 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import dcav from "./dcav.png"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <h2>Design, Code, Visualize & Analize</h2>
+      <h1>Welcome :)</h1>
+      <img src={dcav} alt="Design Code Analize Visualize" />
+      <p>explore the site</p>
     </Layout>
   )
 }
