@@ -7,7 +7,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <h1>Code Design Analize Visualize</h1>
+      <h1>Code Design Analyse Visualize</h1>
       {/* <img src={dcav} alt="Design Code Analize Visualize" /> */}
       <p>{`explore the site :)`}</p>
     </Layout>
