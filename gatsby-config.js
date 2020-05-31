@@ -1,3 +1,4 @@
+const { graphqlIDE } = require('./config')
 
 module.exports = {
   siteMetadata: {

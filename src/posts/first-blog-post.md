@@ -1,7 +1,8 @@
 ---
-title: "Hey Gatsby"
+title: "First Blog Post"
 date: 2020-01-01
 user: '@vi'
+tags: ["demo", "dev"]
 ---
 
 I just started

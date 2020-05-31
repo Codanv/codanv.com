@@ -3,15 +3,20 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import User from "../components/user"
+import blogStyles from "./blog.module.scss"
 
 const Blog = props => {
-  
   return (
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
+      <h1 className={blogStyles.title}>
+        {props.data.markdownRemark.frontmatter.title}
+      </h1>
+      <p className={blogStyles.date}>
+        {props.data.markdownRemark.frontmatter.date}
+      </p>
       <div
+        className={blogStyles.content}
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
       <User
@@ -30,11 +35,10 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date
+        date(formatString: "MMMM DD, Y")
         user
       }
       html
     }
   }
 `
-

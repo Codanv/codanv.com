@@ -14,7 +14,7 @@ const data = useStaticQuery(graphql`
         node {
           frontmatter {
             title
-            date
+            date(formatString: "MMMM DD, Y")
           }
           html
           excerpt
@@ -37,7 +37,8 @@ const data = useStaticQuery(graphql`
             <li className={blogStyles.post}>
               <Link to={`/blog/${edge.node.fields.slug}`}>
                 <h2>{edge.node.frontmatter.title}</h2>
-                <p>{edge.node.frontmatter.publishedDate}</p>
+                <p>{edge.node.frontmatter.date}</p>
+                <p>{edge.node.excerpt}</p>
               </Link>
             </li>
           )
