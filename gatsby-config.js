@@ -1,4 +1,3 @@
-const {accessToken, spaceId} = require('./config.js')
 
 module.exports = {
   siteMetadata: {
@@ -8,12 +7,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId,
-        accessToken      }
-    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
