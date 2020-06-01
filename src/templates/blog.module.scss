@@ -11,3 +11,21 @@
 .content {
     margin-bottom: 3rem;
 }
+
+.tags {
+    list-style-type: none;
+    margin: 0;
+    .tag {
+        display: inline-block;
+        padding: 0 0.5rem;
+        background: #eeeeee;
+        color: #333333;
+        margin-right: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+    }
+    .lasttag {
+        margin-left: 3rem;
+    }
+}
+

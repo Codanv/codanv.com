@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import User from "../components/user"
@@ -9,6 +9,18 @@ const Blog = props => {
   return (
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
+      <ul className={blogStyles.tags}>
+        {props.data.markdownRemark.frontmatter.tags.map(tag => {
+          return (
+            <Link to={`/blog/tags/${tag}`}>
+              <li className={blogStyles.tag}>{tag}</li>
+            </Link>
+          )
+        })}
+        <Link to="/blog/tags">
+          <li className={`${blogStyles.tag} ${blogStyles.lasttag}`} >View all tags</li>
+        </Link>
+      </ul>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
       </h1>
@@ -37,6 +49,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, Y")
         user
+        tags
       }
       html
     }

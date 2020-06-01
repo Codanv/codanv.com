@@ -5,8 +5,6 @@ user: 'Avi'
 tags: ["test", "dev"]
 ---
 
-I just started
-
 ![Coding](./pic1.png)
 
 ## Intro
