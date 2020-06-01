@@ -32,7 +32,7 @@ export default class BlogList extends React.Component {
                     to={`/blog/${node.fields.slug}`}
                   >
                     <h3>{node.frontmatter.title}</h3>
-                    <p>{node.frontmatter.date} . {node.frontmatter.user}</p>
+                    <p>{node.frontmatter.user} · {node.frontmatter.date}</p>
                     <p>{node.excerpt}</p>
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ export const blogListQuery = graphql`
           }
           excerpt
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMM DD, YYYY")
             title
             user
           }

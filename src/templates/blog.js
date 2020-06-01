@@ -9,6 +9,15 @@ const Blog = props => {
   return (
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
+      <p>
+        <Link to="/blog/">← back to the list</Link>
+      </p>
+      <spam className={blogStyles.date}>
+      {props.data.markdownRemark.frontmatter.user} · {props.data.markdownRemark.frontmatter.date}
+      </spam>
+      <h1 className={blogStyles.title}>
+        {props.data.markdownRemark.frontmatter.title}
+      </h1>
       <ul className={blogStyles.tags}>
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
@@ -21,12 +30,6 @@ const Blog = props => {
           <li className={`${blogStyles.tag} ${blogStyles.lasttag}`} >View all tags</li>
         </Link>
       </ul>
-      <h1 className={blogStyles.title}>
-        {props.data.markdownRemark.frontmatter.title}
-      </h1>
-      <p className={blogStyles.date}>
-        {props.data.markdownRemark.frontmatter.date}
-      </p>
       <div
         className={blogStyles.content}
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
@@ -47,7 +50,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date(formatString: "MMMM DD, Y")
+        date(formatString: "MMM DD, Y")
         user
         tags
       }
