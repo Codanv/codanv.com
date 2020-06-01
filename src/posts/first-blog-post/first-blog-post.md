@@ -5,7 +5,7 @@ user: '@vi'
 tags: ["demo", "dev"]
 ---
 
-I just started
+I just started...
 
 ## Topics
 1. Gatsby
