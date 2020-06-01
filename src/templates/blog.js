@@ -13,7 +13,7 @@ const Blog = props => {
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
             <Link to={`/blog/tags/${tag}`}>
-              <li className={blogStyles.tag}>{tag}</li>
+              <li className={blogStyles.tag}>#{tag}</li>
             </Link>
           )
         })}

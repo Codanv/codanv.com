@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 import blogListStyles from "./blog-list.module.scss"
 
 export default class BlogList extends React.Component {
@@ -18,7 +18,7 @@ export default class BlogList extends React.Component {
       <Layout>
         <Head title="blog" />
         <h1>Blog</h1>
-        <span className={blogListStyles.alltags}><Link to="/blog/tags">View all tags?</Link></span>
+        <span className={blogListStyles.alltags}><Link to="/blog/tags">list by tags?</Link></span>
         {posts.map(({ node }) => {
           // const title = node.frontmatter.title || node.fields.slug
           return (
@@ -62,10 +62,11 @@ export default class BlogList extends React.Component {
               key={`pagination-number${i + 1}`}
               to={`/blog/${i === 0 ? "" : i + 1}`}
               style={{
-                padding: rhythm(1 / 4),
+                // padding: rhythm(1 / 4),
                 textDecoration: "none",
-                color: i + 1 === currentPage ? "#ffffff" : "",
-                background: i + 1 === currentPage ? "#007acc" : "",
+                color: i + 1 === currentPage ? "#333333" : "",
+                background: i + 1 === currentPage ? "#e4e4e4" : "",
+                padding: "0 0.5rem"
               }}
             >
               {i + 1}
