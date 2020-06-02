@@ -1,4 +1,5 @@
 const { graphqlIDE } = require('./config')
+const path = require('path')
 
 module.exports = {
   siteMetadata: {
@@ -19,10 +20,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
+        path: path.join(__dirname, `src`)
       }
     },
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

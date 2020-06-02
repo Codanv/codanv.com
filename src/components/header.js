@@ -2,13 +2,16 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 // import './header.module.scss'
 import headerStyles from "./header.module.scss"
+import Img from "gatsby-image"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          title
+      codanvLogo: file(relativePath: { eq: "images/codanv-clipped.png" }) {
+        childImageSharp {
+          fixed(width: 100, height: 24) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -16,12 +19,10 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <h2>
-        <Link to="/" className={headerStyles.title}>
-          {data.site.siteMetadata.title}
-        </Link>
-      </h2>
-
+      <Link to="/" >
+        
+      </Link>
+      
       <nav>
         <ul className={headerStyles.navList}>
           <li>
@@ -30,7 +31,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/"
             >
-              Home
+              <Img fixed={data.codanvLogo.childImageSharp.fixed} alt="Codanv logo" />
             </Link>
           </li>
           <li>
@@ -46,9 +47,9 @@ const Header = () => {
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
-              to="/about"
+              to="/project"
             >
-              About
+              Project
             </Link>
           </li>
           <li>

@@ -107,22 +107,4 @@ export const blogListQuery = graphql`
     }
   }
 `
-// export const pageQuery = graphql`
-//   query blogPageQuery($skip: Int!, $limit: Int!) {
-//     allMarkdownRemark(
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       limit: $limit
-//       skip: $skip
-//     ) {
-//       edges {
-//         node {
-//           excerpt
-//           frontmatter {
-//             date(formatString: "DD MMMM, YYYY")
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+

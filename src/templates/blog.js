@@ -27,7 +27,7 @@ const Blog = props => {
           )
         })}
         <Link to="/blog/tags">
-          <li className={`${blogStyles.tag} ${blogStyles.lasttag}`} >View all tags</li>
+          <li className={blogStyles.tag} >View all tags</li>
         </Link>
       </ul>
       <div

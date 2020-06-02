@@ -1,7 +1,7 @@
 ---
 title: "First Blog Post"
 date: 2020-01-01
-user: '@vi'
+user: 'vi'
 tags: ["demo", "dev"]
 ---
 
