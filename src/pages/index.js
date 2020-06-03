@@ -10,9 +10,8 @@ const IndexPage = () => {
     <Layout>
       <Head title="Home" />
       <div className={indexStyles.center}>
-        <h1>Design, code, analyse & visualize</h1>
-        <p>Our ambition is to effectively model real-world objects/situations to software objects/programs by designing, coding, analysing and    visualizing.
-        </p>
+        <h1>Model real-world entities by designing, coding, analysing and    visualizing.
+        </h1>
         <p>In order to do so, we need to have the right mindset and specific   domain knowledge.
         </p>
         <p> Let's continue the endeavour...</p>

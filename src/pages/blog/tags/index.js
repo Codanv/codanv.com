@@ -20,7 +20,10 @@ const TagsPage = ({
   <Layout>
     <Head title={title} />
     <div>
-      <h1>Tags</h1>
+      <p>
+        <Link to="/blog">← Blog</Link>
+      </p>
+      <h1>All Tags</h1>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>

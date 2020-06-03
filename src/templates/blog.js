@@ -10,7 +10,7 @@ const Blog = props => {
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
       <p>
-        <Link to="/blog/">← back to the list</Link>
+        <Link to="/blog/">← Blog</Link>
       </p>
       <spam className={blogStyles.date}>
       {props.data.markdownRemark.frontmatter.user} · {props.data.markdownRemark.frontmatter.date}
@@ -21,14 +21,16 @@ const Blog = props => {
       <ul className={blogStyles.tags}>
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
-            <Link to={`/blog/tags/${tag}`}>
-              <li className={blogStyles.tag}>#{tag}</li>
+            <li>
+            <Link to={`/blog/tags/${tag}`} className={blogStyles.tag} >
+              #{tag}
             </Link>
+            </li>
           )
         })}
-        <Link to="/blog/tags">
-          <li className={blogStyles.tag} >View all tags</li>
-        </Link>
+        <li>
+          <Link to="/blog/tags" >View all tags</Link>
+        </li>
       </ul>
       <div
         className={blogStyles.content}

@@ -4,8 +4,22 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Codanv',
-    description: `Our ambition is to effectively model real-world objects/situations to software objects/programs by designing, coding, analysing and visualizing. In order to do so, we need to have the right mindset and specific domain knowledge. Let's continue the endeavour...`,
-    author: 'avi'
+    description: ` Model real-world entities by designing, coding, analysing and visualizing. In order to do so, we need to have the right mindset and specific domain knowledge. Let's continue the endeavour...`,
+    author: 'avi',
+    menuLinks:[
+      {
+        name: 'blog',
+        link: '/blog'
+      },
+      {
+          name:'project',
+          link:'/project'
+      },
+      {
+        name: 'contact',
+        link: '/contact'
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',

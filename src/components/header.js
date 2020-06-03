@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-// import './header.module.scss'
 import headerStyles from "./header.module.scss"
 import Img from "gatsby-image"
 
@@ -9,8 +8,17 @@ const Header = () => {
     query {
       codanvLogo: file(relativePath: { eq: "images/codanv-clipped.png" }) {
         childImageSharp {
-          fixed(width: 100, height: 24) {
+          fixed(width: 170, height: 41) {
             ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      siteNavigation: site {
+        siteMetadata {
+          title 
+          menuLinks {
+            name 
+            link
           }
         }
       }
@@ -19,52 +27,36 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <Link to="/" >
-        
-      </Link>
-      
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
+      <div className={headerStyles.headerContent}>
+        <div className={headerStyles.content}>
+          <h1 className={headerStyles.title}>
             <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
               to="/"
             >
-              <Img fixed={data.codanvLogo.childImageSharp.fixed} alt="Codanv logo" />
+              <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} />
             </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/blog"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/project"
-            >
-              Project
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          </h1>
+          <div>
+            <nav>
+              <ul className={headerStyles.navList}>
+                {data.siteNavigation.siteMetadata.menuLinks.map(link => (
+                  <li
+                    key={link.name}
+                    className={headerStyles.link}
+                  >
+                    <Link to={link.link} activeClassName={headerStyles.activeNavItem} >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
   )
 }
 
 export default Header
+

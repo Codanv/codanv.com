@@ -16,6 +16,12 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Head title={tagHeader}/>
+      <p>
+        <Link to="/blog">← Blog</Link>
+      </p>
+      <p>
+        <Link to="/blog/tags">← View all tags?</Link>
+      </p>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
@@ -28,11 +34,6 @@ const Tags = ({ pageContext, data }) => {
           )
         })}
       </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <Link to="/blog/tags">All tags</Link>
     </Layout>
   )
 }

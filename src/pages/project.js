@@ -11,7 +11,7 @@ const ProjectPage = () => {
       <h1>Project</h1>
       <ol className={projectStyles.projects}>
         <li className={projectStyles.project}>
-          <h3>
+          <p>
           <a
             href="https://github.com/Codanv/codanv.com.git"
             target="_blank"
@@ -19,11 +19,11 @@ const ProjectPage = () => {
           >
             codanv.com
           </a>
-          </h3>
+          </p>
         </li>
 
         <li className={projectStyles.project}>
-          <h3>
+          <p>
           <a
             href="https://github.com/Codanv/codanv.github.io.git"
             target="_blank"
@@ -31,7 +31,7 @@ const ProjectPage = () => {
           >
             codanv.github.io
           </a>
-          </h3>
+          </p>
         </li>
       </ol>
     </Layout>

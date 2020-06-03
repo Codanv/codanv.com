@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-// import { rhythm } from "../utils/typography"
 import blogListStyles from "./blog-list.module.scss"
 
 export default class BlogList extends React.Component {
@@ -18,39 +17,25 @@ export default class BlogList extends React.Component {
       <Layout>
         <Head title="blog" />
         <h1>Blog</h1>
-        <span className={blogListStyles.alltags}><Link to="/blog/tags">list by tags?</Link></span>
+        <p className={blogListStyles.alltags}><Link to="/blog/tags">View all tags?</Link></p>
         {posts.map(({ node }) => {
-          // const title = node.frontmatter.title || node.fields.slug
           return (
-            <div key={node.fields.slug}>
-              <ol
-                className={blogListStyles.posts}
-              >
-                <li className={blogListStyles.post}>
+              <ol className={blogListStyles.posts}>
+                <li key={node.fields.slug} className={blogListStyles.post}>
                   <Link
                     style={{ boxShadow: "none" }}
                     to={`/blog/${node.fields.slug}`}
                   >
                     <h3>{node.frontmatter.title}</h3>
-                    <p>{node.frontmatter.user} · {node.frontmatter.date}</p>
+                    <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.frontmatter.user}</p>
                     <p>{node.excerpt}</p>
                   </Link>
                 </li>
               </ol>
-            </div>
           )
         })}
 
-        <ul
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            listStyle: "none",
-            padding: 0,
-          }}
-        >
+        <ul className={blogListStyles.pageNavigationList}>
           {!isFirst && (
             <Link to={`/blog/${prevPage}`} rel="prev">
               ← Previous Page
@@ -64,7 +49,7 @@ export default class BlogList extends React.Component {
               style={{
                 // padding: rhythm(1 / 4),
                 textDecoration: "none",
-                color: i + 1 === currentPage ? "#333333" : "",
+                color: i + 1 === currentPage ? "#333333" : "#1ca086",
                 background: i + 1 === currentPage ? "#e4e4e4" : "",
                 padding: "0 0.5rem"
               }}
