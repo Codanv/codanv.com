@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import User from "../components/user"
+// import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
 const Blog = props => {
@@ -36,11 +36,11 @@ const Blog = props => {
         className={blogStyles.content}
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
-      <User
+      {/* <User
         username={props.data.markdownRemark.frontmatter.user}
         avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
         excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      />
+      /> */}
     </Layout>
   )
 }

@@ -26,34 +26,30 @@ const Header = () => {
   `)
 
   return (
+
     <header className={headerStyles.header}>
-      <div className={headerStyles.headerContent}>
-        <div className={headerStyles.content}>
-          <h1 className={headerStyles.title}>
-            <Link
-              to="/"
-            >
-              <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} />
-            </Link>
-          </h1>
-          <div>
-            <nav>
-              <ul className={headerStyles.navList}>
-                {data.siteNavigation.siteMetadata.menuLinks.map(link => (
-                  <li
-                    key={link.name}
-                    className={headerStyles.link}
-                  >
-                    <Link to={link.link} activeClassName={headerStyles.activeNavItem} >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </div>
+     
+      <div className={headerStyles.logo}>
+        <Link to="/" >
+          <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} />
+        </Link>
       </div>
+
+      <nav>
+        <ul className={headerStyles.topnav} id="navtop">
+          {data.siteNavigation.siteMetadata.menuLinks.map(link => (
+            <li
+              key={link.name}
+              className={headerStyles.link}
+            >
+              <Link to={link.link} activeClassName={headerStyles.activelink} >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+       
     </header>
   )
 }
