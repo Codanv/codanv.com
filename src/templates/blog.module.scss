@@ -4,7 +4,7 @@
 
 .date {
     color: #777777;
-    font-size: .7rem;
+    font-size: .8rem;
     font-style: italic;
 }
 
@@ -18,7 +18,7 @@
     li {
         margin: 0;
         display: inline-block;
-        font-size: 0.8rem;
+        // font-size: 0.8rem;
         .tag {
            margin-right: 0.5rem;
         }    
@@ -27,4 +27,5 @@
 
 a {
     text-decoration: none;
+    color: #399bf0;
 }

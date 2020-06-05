@@ -8,12 +8,5 @@ const typography = new Typography({
     fontDisplay: 'swap'    
 })
 
-// Output CSS as string.
-typography.toString()
-
-// Or insert styles directly into the <head> (works well for client-only
-// JS web apps.
-typography.injectStyles()
-
 export const { scale, rhythm, options } = typography
 export default typography

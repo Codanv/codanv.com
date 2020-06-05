@@ -3,31 +3,31 @@
     margin: 0;
 }
 
+.total-count {
+    background: #f7b835;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.3rem;
+}
+
 .post {
     margin: 1rem 0;
     h3 {
-        margin-top: 0;
+        margin: 0;
     }
     a {
-        background: #f4f4f4;
+        background: #e4e4e4;
         display: block;
         padding: 0.5rem;
     }
-    a:hover {
-        background: #e4e4e4;
-    }
     p {
-        color: #777777;
         font-size: .9rem;
+        color: #000000;
     }
     .title-details {
+        font-size: .8rem;
+        color: #777777;
         font-style: italic;
-        font-size: .7rem;
     }
-}
-
-.alltags {
-    font-size: 0.8rem;
 }
 
 .page-navigation-list {

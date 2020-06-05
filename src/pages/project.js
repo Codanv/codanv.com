@@ -10,29 +10,29 @@ const ProjectPage = () => {
       <Head title="project" lang="en" />
       <h1>Project</h1>
       <ol className={projectStyles.projects}>
-        <li className={projectStyles.project}>
-          <p>
+        
           <a
             href="https://github.com/Codanv/codanv.com.git"
             target="_blank"
             rel="noopener noreferrer"
           >
+            <li className={projectStyles.project}>
+          <p>
             codanv.com
-          </a>
           </p>
         </li>
+          </a>
 
-        <li className={projectStyles.project}>
-          <p>
-          <a
-            href="https://github.com/Codanv/codanv.github.io.git"
+          <a href="https://github.com/Codanv/codanv.github.io.git"
             target="_blank"
             rel="noopener noreferrer"
           >
+        <li className={projectStyles.project}>
+          <p>
             codanv.github.io
-          </a>
           </p>
         </li>
+          </a>
       </ol>
     </Layout>
   )

@@ -5,7 +5,9 @@ user: 'vi'
 tags: ["demo", "dev"]
 ---
 
-I just started...
+## I just started...
+
+![Coding](./pic1.png)
 
 ## Topics
 1. Gatsby

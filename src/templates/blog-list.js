@@ -7,6 +7,7 @@ import blogListStyles from "./blog-list.module.scss"
 export default class BlogList extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
+    const totalCount = this.props.data.allMarkdownRemark.totalCount
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
@@ -16,8 +17,8 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <Head title="blog" />
-        <h1>Blog</h1>
-        <p className={blogListStyles.alltags}><Link to="/blog/tags">View all tags?</Link></p>
+    <h1>Blog <small className={blogListStyles.totalCount}>{totalCount}</small></h1>
+        <p className={blogListStyles.alltags}><Link to="/blog/tags">Browse by tags?</Link></p>
         {posts.map(({ node }) => {
           return (
               <ol className={blogListStyles.posts}>
@@ -27,7 +28,7 @@ export default class BlogList extends React.Component {
                     to={`/blog/${node.fields.slug}`}
                   >
                     <h3>{node.frontmatter.title}</h3>
-                    <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.frontmatter.user}</p>
+                    <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read · {node.frontmatter.user}</p>
                     <p>{node.excerpt}</p>
                   </Link>
                 </li>
@@ -87,8 +88,10 @@ export const blogListQuery = graphql`
             title
             user
           }
+          timeToRead
         }
       }
+      totalCount
     }
   }
 `

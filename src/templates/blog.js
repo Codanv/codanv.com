@@ -13,7 +13,7 @@ const Blog = props => {
         <Link to="/blog/">← Blog</Link>
       </p>
       <spam className={blogStyles.date}>
-      {props.data.markdownRemark.frontmatter.user} · {props.data.markdownRemark.frontmatter.date}
+      {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read · {props.data.markdownRemark.frontmatter.user}
       </spam>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
@@ -29,7 +29,7 @@ const Blog = props => {
           )
         })}
         <li>
-          <Link to="/blog/tags" >View all tags</Link>
+          <Link to="/blog/tags" > · list tags</Link>
         </li>
       </ul>
       <div
@@ -57,6 +57,7 @@ export const query = graphql`
         tags
       }
       html
+      timeToRead
     }
   }
 `

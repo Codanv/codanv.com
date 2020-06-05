@@ -1,6 +1,6 @@
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 750px;
     padding: 1rem;
 
     display: flex;
@@ -10,4 +10,8 @@
 
 .content {
     flex-grow: 1;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
 }
