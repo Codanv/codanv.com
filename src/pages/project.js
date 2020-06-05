@@ -10,7 +10,6 @@ const ProjectPage = () => {
       <Head title="project" lang="en" />
       <h1>Project</h1>
       <ol className={projectStyles.projects}>
-        
           <a
             href="https://github.com/Codanv/codanv.com.git"
             target="_blank"

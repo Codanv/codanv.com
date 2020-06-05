@@ -12,7 +12,7 @@ const ContactPage = () => {
         <a href="https://twitter.com/codanv" target="_blank" rel="noopener noreferrer">Twitter</a>     
       </p>
       <h2>Your concern</h2>
-      <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+      <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true" >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <p>
@@ -24,6 +24,7 @@ const ContactPage = () => {
         <p>
           <label>Message: <textarea name="message"></textarea></label>
         </p>
+        <div data-netlify-recaptcha="true"></div>
         <p>
           <button type="submit">Send</button>
         </p>
