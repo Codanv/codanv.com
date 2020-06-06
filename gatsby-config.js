@@ -5,7 +5,8 @@ module.exports = {
   siteMetadata: {
     title: 'Codanv',
     description: ` Model real-world entities by designing, coding, analysing and visualizing. In order to do so, we need to have the right mindset and specific domain knowledge. Let's continue the endeavour...`,
-    author: 'avi',
+    author: '@Codanv',
+    siteUrl: `https://www.codanv.com`,
     menuLinks:[
       {
         name: 'blog',
@@ -29,6 +30,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
