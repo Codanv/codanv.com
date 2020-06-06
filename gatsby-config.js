@@ -1,4 +1,4 @@
-const { graphqlIDE } = require('./config')
+const { graphqlIDE, GOOGLE_ANALYTICS_TRACKING_ID } = require('./config')
 const path = require('path')
 
 module.exports = {
@@ -23,6 +23,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
