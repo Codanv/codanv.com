@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
+import {graphql, useStaticQuery, Link} from 'gatsby'
 import FooterStyles from './footer.module.scss'
 
 const Footer = () => {
@@ -16,6 +16,7 @@ const Footer = () => {
     return (
         <footer className={FooterStyles.footer}>
             <p>{data.site.siteMetadata.title} © 2020  </p>
+            <p><Link to="/rss.xml">rss</Link></p>
         </footer>
     )
 }
