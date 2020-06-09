@@ -31,7 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -85,8 +84,6 @@ module.exports = {
         ],
       },
     },
-
-
 
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,

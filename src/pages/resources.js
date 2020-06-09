@@ -8,7 +8,7 @@ const ResourcePage = () => {
     <Layout>
       <Head title="resources" lang="en" />
       <h1>Resources</h1>
-      <ul className={resourceStyles.projects}>
+      <ul>
         <li>
           <a
             href="https://github.com/Codanv/"
@@ -19,7 +19,7 @@ const ResourcePage = () => {
           </a>
         </li>
 
-        <li className={resourceStyles.project}>
+        <li>
           <a
             href="https://www.youtube.com/channel/UCwbQQu92VNMhcidYbOArJYg/playlists"
             target="_blank"
@@ -101,7 +101,7 @@ const ResourcePage = () => {
           </ul>
         </li>
 
-        <li className={resourceStyles.project}>
+        <li>
           <a
             href="https://instagram.com/thecodanv"
             target="_blank"
