@@ -17,7 +17,7 @@ const IndexPage = () => {
         
         <p>
           <span className={indexStyles.blogLink}>
-            <Link to="/blog">Get Started →</Link>
+            <Link to="/resources">Get Started →</Link>
           </span>
         </p>
         <p> Let's continue the endeavour...</p>
