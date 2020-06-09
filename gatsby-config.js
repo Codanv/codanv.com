@@ -11,11 +11,11 @@ module.exports = {
       {
         name: 'blog',
         link: '/blog'
-      },
+      },     
       {
-          name:'project',
-          link:'/project'
-      },
+        name: 'resources',
+        link: '/resources'
+      },     
       {
         name: 'contact',
         link: '/contact'
@@ -31,8 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-
-
 
     {
       resolve: `gatsby-plugin-feed`,

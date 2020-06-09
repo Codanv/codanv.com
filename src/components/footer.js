@@ -16,7 +16,9 @@ const Footer = () => {
     return (
         <footer className={FooterStyles.footer}>
             <p>{data.site.siteMetadata.title} © 2020  </p>
-            <p><Link to="/rss.xml">rss</Link></p>
+            <p>
+                <Link to="/rss.xml">rss</Link>
+            </p>
         </footer>
     )
 }
