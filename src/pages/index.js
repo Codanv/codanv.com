@@ -12,7 +12,7 @@ const IndexPage = () => {
       <div className={indexStyles.center}>
         <h1>Model real life entities by designing, coding, analysing and    visualizing
         </h1>
-        <p>In order to do so, we need to have the right mindset and specific   domain knowledge
+        <p>we need to have the right mindset and specific   domain knowledge
         </p>
         
         <p>
