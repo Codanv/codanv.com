@@ -27,7 +27,7 @@ export default class BlogList extends React.Component {
                     style={{ boxShadow: "none",  }}
                     to={`/blog/${node.fields.slug}`}
                   >
-                    <h3 style={{color: `black`}}>{node.frontmatter.title}</h3>
+                    <h3>{node.frontmatter.title}</h3>
                     <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read · <a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> </p>
                     <p>{node.excerpt}</p>
                   </Link>
