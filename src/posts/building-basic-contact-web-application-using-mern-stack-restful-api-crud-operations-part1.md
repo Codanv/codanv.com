@@ -16,7 +16,7 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 > In the [first part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part1)) of the tutorial we are going to create back-end for our basic contact web application.
 
-`At the end of [part2](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) we'll have source code of the project.`
+*At the end of [part2](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) we'll have source code of the project.*
 
 ![Contact list with create form](./images/contact-mern-stack/mern-contact-add.png)
 
