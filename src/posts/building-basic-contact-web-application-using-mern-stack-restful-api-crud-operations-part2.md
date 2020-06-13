@@ -1,6 +1,6 @@
 ---
 title: "Building Basic Contact Web Application using MERN Stack(RESTful API for CRUD Operations) - Part 2"
-date: 2020-06-12
+date: 2020-06-13
 user: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
 tags: ["mern", "webdev"]

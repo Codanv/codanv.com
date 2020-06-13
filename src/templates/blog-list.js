@@ -23,7 +23,10 @@ export default class BlogList extends React.Component {
           return (
               <ol className={blogListStyles.posts}>
                 <li key={node.fields.slug} className={blogListStyles.post}>
-                  <Link to={`/blog/${node.fields.slug}`}>
+                  <Link
+                    style={{ boxShadow: "none",  }}
+                    to={`/blog/${node.fields.slug}`}
+                  >
                     <h3 style={{color: `black`}}>{node.frontmatter.title}</h3>
                     <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read · <a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> </p>
                     <p>{node.excerpt}</p>
