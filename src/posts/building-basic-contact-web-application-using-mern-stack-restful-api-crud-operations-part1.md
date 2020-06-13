@@ -5,9 +5,10 @@ user: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
 tags: ["mern", "webdev", "api"]
 ---
-## Part1: Back-end/server-side (Express/Node/Mongodb)
 
 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
+
+## Part1: Back-end/server-side (Express/Node/Mongodb)
 
 [Part1: Back-end/server-side (Express/Node/Mongodb)](/blog/building-basic-contact-web-application-using-mern-stack-crud-operations-part1)
 
