@@ -479,7 +479,7 @@ Congratulations! 👍
 
 [Part1: Back-end/server-side (Express/Node/Mongodb)](/blog/building-basic-contact-web-application-using-mern-stack-crud-operations-part1)
 
-If you have any question related to this post **[discuss here](https://twitter.com/avinashkumar_2)**
+If you have any question related to this post **[discuss here](https://twitter.com/avinashkumar_2/status/1271618727855796224)**
 
 **[Download/Clone the Source Code](https://github.com/Codanv/mern-stack-contact-app)**
 
