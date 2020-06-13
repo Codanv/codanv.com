@@ -110,7 +110,7 @@ const ResourcePage = () => {
           >
             Data Science & Machine Learning Libraries(example programs)
           </a>
-          <p style={{color: "red"}}>Topics 👇 point only one of related instagram posts</p>
+          <p style={{color: "red"}}>Topics(below) point only one of related instagram posts</p>
           <ul>
             <li>
             <a 
@@ -206,7 +206,7 @@ const ResourcePage = () => {
                 <a 
                 href="https://www.instagram.com/p/B-gpKhlgD5a/"
                 target="_blank"
-                rel="noopener moreferrer"
+                rel="noopener noreferrer"
                 >
                     Other Stuff
                 </a>

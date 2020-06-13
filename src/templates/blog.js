@@ -13,7 +13,7 @@ const Blog = props => {
         <Link to="/blog/">← Blog</Link>
       </p>
       <spam className={blogStyles.date}>
-      {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read · {props.data.markdownRemark.frontmatter.user}
+      {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read · <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a>
       </spam>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
@@ -54,6 +54,7 @@ export const query = graphql`
         title
         date(formatString: "MMM DD, Y")
         user
+        handle
         tags
       }
       html
