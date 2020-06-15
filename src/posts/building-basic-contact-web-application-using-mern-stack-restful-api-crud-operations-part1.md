@@ -14,7 +14,7 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 [Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)
 
-> In the [first part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part1)) of the tutorial we are going to create back-end for our basic contact web application.
+In the [first part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part1)) of the tutorial we are going to create back-end for our basic contact web application.
 
 *At the end of [part2](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) we'll have source code of the project.*
 
@@ -141,10 +141,10 @@ So, we have so far
 - connected to local mongodb database server 
 - used `body-parser` and `cors` middleware application wide 
 
-> Server is up and running...
+Server is up and running...
 
 Okay! Let's create some HTTP endpoints (RESTful api for CRUD Operations) to 
-> 
+ 
 - **Create** ~ creating contact record by sending data using HTTP POST request
 - **Read** ~ retrieve the contact list using HTTP GET request
 - **Update** ~ updating an existing contact in the database by sending HTTP PUT request
@@ -282,4 +282,3 @@ app.listen(3001, () => {
 That's all from server-side!
 
 We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) to complete the party 👍
- 

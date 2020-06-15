@@ -14,7 +14,7 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 [Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)
 
-> In the [second part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
+In the [second part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
 
 ![Contact list with update form](./images/contact-mern-stack/mern-contact-update.png)
 
@@ -60,7 +60,6 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
-
 - We are using [skeleton](https://getskeleton.com) css library to style our application.
 
 In order to use skeleton css classes we need to add skeleton cdn to `index.html` in `client/public` directory
