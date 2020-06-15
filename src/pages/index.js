@@ -24,6 +24,7 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
             </li>
           ))}
       </ul>
+      <p>Let's continue the endeavour...</p>
       </div>
     </Layout>
   )
