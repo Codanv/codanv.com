@@ -10,23 +10,24 @@
 }
 
 .post {
-    margin: 1rem 0;
+    margin-bottom: 3rem;
     h3 {
-        margin: 0;
+        margin-bottom: 0.4375rem;
+        font-size: 1.5rem;
     }
     a {
-        background: #e4e4e4;
+        // background: #e4e4e4;
         display: block;
-        padding: 0.5rem;
+        // padding: 0.5rem;
     }
     p {
-        font-size: .9rem;
-        color: #000000;
+        // font-size: .9rem;
+        // color: #000000;
     }
     .title-details {
-        font-size: .8rem;
+        font-size: .7rem;
         color: #000000;
-        font-style: italic;
+        // font-style: italic;
     }
 }
 

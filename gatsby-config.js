@@ -30,7 +30,6 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {

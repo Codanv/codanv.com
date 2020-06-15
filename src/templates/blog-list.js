@@ -26,11 +26,11 @@ export default class BlogList extends React.Component {
                   <Link
                     style={{ boxShadow: "none",  }}
                     to={`/blog/${node.fields.slug}`}
-                  >
+                    >
                     <h3>{node.frontmatter.title}</h3>
-                    <p className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read · <a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> </p>
-                    <p>{node.excerpt}</p>
                   </Link>
+                    <span className={blogListStyles.titleDetails}><a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> on {node.frontmatter.date} · {node.timeToRead} min read </span>
+                    <p>{node.frontmatter.description}</p>
                 </li>
               </ol>
           )
@@ -82,12 +82,12 @@ export const blogListQuery = graphql`
           fields {
             slug
           }
-          excerpt
           frontmatter {
             date(formatString: "MMM DD, YYYY")
             title
             user
             handle
+            description
           }
           timeToRead
         }

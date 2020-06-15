@@ -14,14 +14,27 @@
 
 .tags {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: space-evenly;
     margin: 1.5rem;
     li {
         margin: 0;
-        display: inline-block;
-        // font-size: 0.8rem;
+        // display: inline-block;
+        font-size: 0.9rem;
         .tag {
            margin-right: 0.5rem;
         }    
+    }
+
+    .viewall {
+        a {
+            color: #ffffff;
+            background: #484384;
+            padding: 0.2rem;
+            border-radius: 0.5rem;
+        }
     }
 }
 

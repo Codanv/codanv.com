@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-// import User from "../components/user"
+import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
 const Blog = props => {
@@ -13,7 +13,7 @@ const Blog = props => {
         <Link to="/blog/">← Blog</Link>
       </p>
       <spam className={blogStyles.date}>
-      {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read · <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a>
+      <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a> on {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read 
       </spam>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
@@ -28,19 +28,37 @@ const Blog = props => {
             </li>
           )
         })}
-        <li>
-          <Link to="/blog/tags" > · list tags</Link>
+        <li className={blogStyles.viewall}>
+          <Link to="/blog/tags" > View all Tags</Link>
         </li>
       </ul>
+
       <div
         className={blogStyles.content}
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
-      {/* <User
+
+       <ul className={blogStyles.tags}>
+        {props.data.markdownRemark.frontmatter.categories.map(category => {
+          return (
+            <li>
+            <Link to={`/blog/categories/${category}`} className={blogStyles.tag} >
+              {category}
+            </Link>
+            </li>
+          )
+        })}
+        <li className={blogStyles.viewall}>
+          <Link to="/blog/categories" > View all Categories</Link>
+        </li>
+      </ul>
+
+      <User
         username={props.data.markdownRemark.frontmatter.user}
-        avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-        excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      /> */}
+        // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+        handle={props.data.markdownRemark.frontmatter.handle}
+        excerpt="Leraning Enthusiast"
+      />
     </Layout>
   )
 }
@@ -56,6 +74,7 @@ export const query = graphql`
         user
         handle
         tags
+        categories
       }
       html
       timeToRead

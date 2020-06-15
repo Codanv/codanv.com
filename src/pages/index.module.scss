@@ -1,6 +1,4 @@
-.center {
-    text-align: center;
- }  
+
 .blog-link {
     background-color: #484384; 
     padding: 0.3rem 0.4rem;
@@ -9,4 +7,33 @@
         color: #ffffff;
     }
 }
+
+.title {
+    font-size: 3rem;
+}
  
+.domain {
+    margin-top: 0.5rem;
+    
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    // text-align: center;
+    background: #484384;
+    margin-right: 0.5rem;
+    
+    border-radius: 0.5rem;
+    list-style-type: none;
+    
+    a {
+        color: #ffffff;
+    }
+    
+}
+
+.domains {
+    // text-align: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

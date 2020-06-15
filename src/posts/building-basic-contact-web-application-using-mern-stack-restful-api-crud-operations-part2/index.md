@@ -1,9 +1,11 @@
 ---
-title: "Building Basic Contact Web Application using MERN Stack(RESTful API for CRUD Operations) - Part 2"
+title: "Building Basic Contact Web Application using MERN Stack - Part 2"
+description: "Frontend - User Interface"
 date: 2020-06-13
 user: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
-tags: ["mern", "webdev"]
+tags: ["mernstack", "frontend"]
+categories: ["Programming", "Web Development", "JavaScript"]
 ---
 
 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
@@ -16,7 +18,7 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 In the [second part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
 
-![Contact list with update form](./images/contact-mern-stack/mern-contact-update.png)
+![Contact list with update form](./mern-contact-update.png)
 
 ### Prerequisites
 
@@ -40,8 +42,7 @@ After getting installed we need to add `proxy` in `package.json` file of client 
 ```json
 "proxy": "http://localhost:3001"
 ```
-![Client Package.json File](./images/contact-mern-stack/client-pkg-json.png)
-
+![Client Package.json File](./client-pkg-json.png)
 
 *Remove all the files from `client/src` directory*
 
