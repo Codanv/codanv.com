@@ -1,5 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+
+// Utilities
+import kebabCase from "lodash/kebabCase"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
 import User from "../components/user"
@@ -42,7 +46,7 @@ const Blog = props => {
         {props.data.markdownRemark.frontmatter.categories.map(category => {
           return (
             <li>
-            <Link to={`/blog/categories/${category}`} className={blogStyles.tag} >
+            <Link to={`/blog/categories/${kebabCase(category)}`} className={blogStyles.tag} >
               {category}
             </Link>
             </li>
