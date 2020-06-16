@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Link, graphql } from "gatsby"
+import blogListStyles from "./blog-list.module.scss"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -19,17 +20,21 @@ const Categories = ({ pageContext, data }) => {
       <p>
         <Link to="/blog">← Blog</Link>
       </p>
-      <p>
-        <Link to="/blog/categories">← View all categories?</Link>
-      </p>
+      <h3>
+        <Link to="/blog/categories">← View all Categories?</Link>
+      </h3>
       <h1>{categoryHeader}</h1>
-      <ul>
+      <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
-            <li key={slug}>
-              <Link to={`/blog/${slug}/`}>{title}</Link>
+            <li key={slug} className={blogListStyles.post} >
+              <Link to={`/blog/${slug}/`}>
+                <h3>{title}</h3>
+              </Link>
+              <span className={blogListStyles.titleDetails}><a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> on {node.frontmatter.date} · {node.timeToRead} min read </span>
+              <p>{node.frontmatter.description}</p>
             </li>
           )
         })}
@@ -77,7 +82,12 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMM DD, YYYY")
             title
+            user
+            handle
+            description
+
           }
         }
       }

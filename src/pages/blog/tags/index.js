@@ -20,15 +20,15 @@ const TagsPage = ({
   <Layout>
     <Head title={title} />
     <div>
-      <p>
-        <Link to="/blog">← Blog</Link>
-      </p>
+      <p><Link to="/blog">← All Blog Posts</Link></p>
+      <h3><Link to="/blog/categories">Browse by categories?</Link></h3>
+      
       <h1>Tags</h1>
-      <ul>
+      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              <span style={{fontSize: `1.5rem`}} >#{tag.fieldValue} {/*({tag.totalCount})*/}</span>
             </Link>
           </li>
         ))}

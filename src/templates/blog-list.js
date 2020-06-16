@@ -17,8 +17,12 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <Head title="blog" />
-    <h1>Blog <small className={blogListStyles.totalCount}>{totalCount}</small></h1>
-        <p className={blogListStyles.alltags}><Link to="/blog/tags">Browse by tags?</Link></p>
+    <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
+        <p>
+          <Link className={blogListStyles.browse}  to="/blog/categories">Browse by categories?</Link>{" "}
+          <Link className={blogListStyles.browse} to="/blog/tags">Browse by tags?</Link>
+        </p>
+
         {posts.map(({ node }) => {
           return (
               <ol className={blogListStyles.posts}>

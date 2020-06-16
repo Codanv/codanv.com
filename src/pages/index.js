@@ -15,6 +15,9 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
       <Head title="Home" />
       <div className={indexStyles.center}>
         <h1 className={indexStyles.title}>Have the right mindset and specific domain knowledge</h1>
+
+        <p style={{textAlign: `center`}}>Let's continue the endeavour...</p>
+        
         <ul className={indexStyles.domains}>
           {group.map(category => (
             <li key={category.fieldValue} className={indexStyles.domain}>
@@ -24,7 +27,6 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
             </li>
           ))}
       </ul>
-      <p>Let's continue the endeavour...</p>
       </div>
     </Layout>
   )
