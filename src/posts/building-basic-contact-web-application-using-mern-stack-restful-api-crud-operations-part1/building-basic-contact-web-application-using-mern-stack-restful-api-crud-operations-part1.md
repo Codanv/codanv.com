@@ -32,21 +32,29 @@ In the [first part]((/blog/building-basic-contact-web-application-using-mern-sta
 
 Create an empty directory:
 
-`$ mkdir mern-stack-contact-app`
+```bash
+$ mkdir mern-stack-contact-app
+```
 
 Go to the created directory
 
-`$ cd mern-stack-contact-app`
+```bash
+$ cd mern-stack-contact-app
+```
 
 Finally, Initialize the project
 
-`$ npm init -y`
+```bash
+$ npm init -y
+```
 
 This will create a `package.json` file in our root of the project directory. It holds config and dependency list of our project.
 
 Install the dependencies 
 
-`$ npm install express body-parser cors mongodb concurrently`
+```bash
+$ npm install express body-parser cors mongodb concurrently
+```
 
 - express ~ web framework of nodejs.
 - body-parser ~ a middleware to parse form data (post, put, delete, etc).
@@ -56,7 +64,9 @@ Install the dependencies
 
 Install `nodemon` utility to automatically restart the server (as developer dependency)
 
-`$ npm install -D nodemon`
+```bash
+$ npm install -D nodemon
+```
 
 Before we start to code 
 
@@ -69,7 +79,7 @@ and add some scripts to start the server in `"scripts"` property
 So your `package.json` looks like the following
 
 
-**`package.json`**
+**package.json**
 ```json
 {
   "name": "mern-stack-contact-app",
@@ -100,7 +110,7 @@ So your `package.json` looks like the following
 
 create `server.js` file with following code in the root of `mern-stack-contact-app` project directory
 
-**`server.js`**
+**server.js**
 ```javascript
 const express = require("express");
 const cors = require("cors");
@@ -131,9 +141,11 @@ app.listen(3001, () => {
 
 Let's run `server.js` (listen the power of nodemon)
 
-`$ npm start devserver`
-
+```bash
+$ npm start devserver
 ```
+
+```bash
 server is up and running...
 connected to mongodb server
 ```

@@ -30,7 +30,9 @@ In the [second part]((/blog/building-basic-contact-web-application-using-mern-st
 
 From the root of `mern-stack-contact-app` project directory
 
-`$ npx create-react-app client`
+```bash
+$ npx create-react-app client
+```
 
 npx will create a react application `client`
 
@@ -52,7 +54,7 @@ create `App.js` and `index.js` files in `client/src` directory
 
 Here is the code for `index.js` where we simply rendering our `App` component
 
-**`index.js`**
+**index.js**
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -67,7 +69,7 @@ In order to use skeleton css classes we need to add skeleton cdn to `index.html`
 
 Remove all the files from `client/public` directory and create `index.html` with following code
 
-**`index.html`**
+**index.html**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +96,7 @@ Wait...
 
 What! we need to use hooks. nope! no problem :)
 
-**`App.js`**
+**App.js**
 ```js
 import React, { useState, useEffect } from "react";
 
@@ -122,7 +124,7 @@ Create a directory `components` in the root of `client/src` directory
 
 Add `ContactTable.js` file in components directory
 
-**`ContactTable.js`**
+**ContactTable.js**
 ```js
 import React from "react";
 
@@ -178,7 +180,7 @@ Cool :)
 
 Let's have the user interface for creating contact - add `AddContactForm.js` to the `components` directory
 
-**`AddContactForm.js`**
+**AddContactForm.js**
 ```js
 import React, { useState } from "react";
 
@@ -255,7 +257,7 @@ Add `EditContactForm.js` to the `components` directory, so that we can update co
 
 This is almost similar as `AddContactForm` 
 
-**`EditContactForm.js`**
+**EditContactForm.js**
 ```js 
 import React, { useState, useEffect } from "react";
 
@@ -340,7 +342,7 @@ export default EditContactForm;
 
 Good! We need to add some functions to `App.js` which are passed as props to `ContactTable.js`, `AddContactForm.js` and `EditContactForm.js`
 
-**`App.js`**
+**App.js**
 ```js
 import React, { useState, useEffect } from "react";
 
@@ -473,7 +475,9 @@ Stop(ctrl+c) if backend server is running
 
 Run the contact application (remember the scripts of `package.json` ~ server-side)
 
-`$ npm run start`
+```bash
+$ npm run start
+```
 
 Congratulations! 👍
 

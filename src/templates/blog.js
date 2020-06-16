@@ -1,5 +1,8 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { graphql, Link } from "gatsby"
+
+import Prism from 'prismjs'
+import "prismjs/plugins/line-numbers/prism-line-numbers.js"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
@@ -10,11 +13,16 @@ import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
 const Blog = props => {
+
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
+
   return (
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
       <p>
-        <Link to="/blog/">← Blog</Link>
+        <Link to="/blog/">← All Blog Posts</Link>
       </p>
       <spam className={blogStyles.date}>
       <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a> on {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read 
@@ -42,7 +50,7 @@ const Blog = props => {
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
 
-       <ul className={blogStyles.tags}>
+       <ul className={blogStyles.tags} style={{marginBottom: `3rem`}}>
         {props.data.markdownRemark.frontmatter.categories.map(category => {
           return (
             <li>
