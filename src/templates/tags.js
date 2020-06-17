@@ -18,13 +18,11 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Head title={tagHeader}/>
-      <p>
-        <Link to="/blog">← Blog</Link>
-      </p>
-      <h3>
-        <Link to="/blog/tags">← View all Tags?</Link>
-      </h3>
+      <p><Link to="/blog">← All Blog Posts</Link></p>
+
       <h1>{tagHeader}</h1>
+      <p><Link to="/blog/tags">← View all Tags?</Link></p>
+
       <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {
           const { slug } = node.fields

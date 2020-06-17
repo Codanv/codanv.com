@@ -27,7 +27,7 @@ const Blog = props => {
       <spam className={blogStyles.date}>
       <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a> on {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read 
       </spam>
-      <h1 className={blogStyles.title}>
+      <h1  className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
       </h1>
       <ul className={blogStyles.tags}>
@@ -50,7 +50,7 @@ const Blog = props => {
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
 
-       <ul className={blogStyles.tags} style={{marginBottom: `3rem`}}>
+      <ul className={blogStyles.tags} style={{marginBottom: `3rem`}}>
         {props.data.markdownRemark.frontmatter.categories.map(category => {
           return (
             <li>

@@ -18,12 +18,15 @@ const Categories = ({ pageContext, data }) => {
     <Layout>
       <Head title={categoryHeader}/>
       <p>
-        <Link to="/blog">← Blog</Link>
+        <Link to="/blog">← All Blog Posts</Link>
       </p>
-      <h3>
-        <Link to="/blog/categories">← View all Categories?</Link>
-      </h3>
+      
       <h1>{categoryHeader}</h1>
+
+      <p>
+        <Link to="/blog/categories">← View all Categories?</Link>
+      </p>
+
       <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {
           const { slug } = node.fields

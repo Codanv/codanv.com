@@ -27,6 +27,9 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
             </li>
           ))}
       </ul>
+
+      <p style={{textAlign: `center`}}>Choose your domain</p>
+
       </div>
     </Layout>
   )

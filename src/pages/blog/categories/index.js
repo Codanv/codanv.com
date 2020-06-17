@@ -21,14 +21,14 @@ const CategoriesPage = ({
     <Head title={title} />
     <div>
       <p><Link to="/blog">← All Blog Posts</Link></p>
-      <h3><Link to="/blog/tags">Browse by tags?</Link></h3>
+      <p><Link to="/blog/tags">Browse by tags?</Link></p>
 
       <h1>Categories</h1>
-      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-around`, flexWrap: `wrap`}}>
+      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>
         {group.map(category => (
           <li key={category.fieldValue}>
             <Link to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
-              <span style={{fontSize: `1.5rem`, textDecoration: `underline`}}>{category.fieldValue} {/*({category.totalCount})*/}</span>
+        <span style={{fontSize: `1rem`, textDecoration: `underline`, marginRight: `0.5rem`}}>{category.fieldValue} ({category.totalCount})</span>
             </Link>
           </li>
         ))}
