@@ -20,11 +20,11 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
         
         <ul className={indexStyles.domains}>
           {group.map(category => (
-            <li key={category.fieldValue} className={indexStyles.domain}>
-              <Link to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
+            <Link to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
+              <li key={category.fieldValue} className={indexStyles.domain}>
                 {category.fieldValue}
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
       </ul>
 
