@@ -16,8 +16,10 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <Head title="blog" />
-    <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
+        <Head title="All Blog Posts" />
+        
+        <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
+        
         <p style={{marginBottom: `1rem`}}>
           <Link to="/blog/categories">Browse by categories?</Link>{" "}
         </p>

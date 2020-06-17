@@ -12,13 +12,10 @@ import { Link, graphql } from "gatsby"
 const CategoriesPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
   <Layout>
-    <Head title={title} />
+    <Head title="Category" />
     <div>
       <p><Link to="/blog">← All Blog Posts</Link></p>
       <p><Link to="/blog/tags">Browse by tags?</Link></p>
@@ -59,11 +56,6 @@ export default CategoriesPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___categories) {
         fieldValue

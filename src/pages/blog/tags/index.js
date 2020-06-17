@@ -12,13 +12,10 @@ import { Link, graphql } from "gatsby"
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
   <Layout>
-    <Head title={title} />
+    <Head title="Tags" />
     <div>
       <p><Link to="/blog">← All Blog Posts</Link></p>
       <p><Link to="/blog/categories">Browse by categories?</Link></p>
@@ -59,12 +56,7 @@ export default TagsPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(limit: 2000) {
+   allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

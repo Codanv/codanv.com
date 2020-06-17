@@ -12,7 +12,7 @@ import Head from "../components/head"
 const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
   return (
     <Layout>
-      <Head title="Home" />
+      <Head title="Home" lang="en" />
       <div className={indexStyles.center}>
         <h1 className={indexStyles.title}>Have the right mindset and specific domain knowledge</h1>
 
