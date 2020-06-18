@@ -10,15 +10,15 @@ module.exports = {
     menuLinks:[
       {
         name: 'blog',
-        link: '/blog/'
+        link: '/blog'
       },     
       {
         name: 'resources',
-        link: '/resources/'
+        link: '/resources'
       },     
       {
         name: 'contact',
-        link: '/contact/'
+        link: '/contact'
       }
     ]
   },
