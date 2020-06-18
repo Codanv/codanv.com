@@ -12,7 +12,7 @@ import Head from "../components/head"
 const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
   return (
     <Layout>
-      <Head title="Home" lang="en" />
+      <Head title="Home" lang="en" canonical="https://www.codanv.com/"/>
       <div className={indexStyles.center}>
         <h1 className={indexStyles.title}>Have the right mindset and specific domain knowledge</h1>
 
@@ -20,8 +20,8 @@ const IndexPage = ({data: {allMarkdownRemark: {group}}}) => {
         
         <ul className={indexStyles.domains}>
           {group.map(category => (
-            <Link to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
-              <li key={category.fieldValue} className={indexStyles.domain}>
+            <Link  key={category.fieldValue} to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
+              <li className={indexStyles.domain}>
                 {category.fieldValue}
               </li>
             </Link>

@@ -6,7 +6,7 @@ import Head from "../components/head"
 const ContactPage = () => {
   return (
     <Layout>
-      <Head title="Contact" />
+      <Head title="Contact" canonical="https://www.codanv.com/contact"/>
       <h1>{`Get in touch :)`}</h1>
       <p>
         <a href="https://twitter.com/codanv" target="_blank" rel="noopener noreferrer">Twitter</a>     

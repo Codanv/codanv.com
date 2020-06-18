@@ -4,6 +4,9 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import blogListStyles from "./blog-list.module.scss"
 
+// Utilities
+import kebabCase from "lodash/kebabCase"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
 
@@ -16,7 +19,8 @@ const Categories = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Head title={categoryHeader}/>
+      <Head title={categoryHeader} 
+      canonical={`https://www.codanv.com/blog/categories/${kebabCase(category)}/`} />
       <p>
         <Link to="/blog">← All Blog Posts</Link>
       </p>

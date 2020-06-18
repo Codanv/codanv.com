@@ -16,7 +16,7 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <Head title="All Blog Posts" />
+        <Head title="All Blog Posts" canonical="https://www.codanv.com/blog/" />
         
         <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
         

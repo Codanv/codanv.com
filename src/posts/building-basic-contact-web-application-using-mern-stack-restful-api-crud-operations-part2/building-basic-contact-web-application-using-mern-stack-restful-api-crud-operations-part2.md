@@ -1,6 +1,7 @@
 ---
 title: "Building Basic Contact Web Application using MERN Stack - Part 2"
 description: "Frontend - User Interface"
+canonical: "https://www.codanv.com/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2/"
 date: 2020-06-13
 user: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 
 import { useStaticQuery, graphql } from "gatsby"
 
-const Head = ({ title, description, lang, meta }) => {
+const Head = ({ canonical, title, description, lang, meta }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,9 +22,12 @@ const Head = ({ title, description, lang, meta }) => {
   return (
     <Helmet
       htmlAttributes={{ lang }}
-    //   title={`${title} | ${data.site.siteMetadata.title}`}
+      //   title={`${title} | ${data.site.siteMetadata.title}`}
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      link={
+        canonical ? [{ rel: "canonical", key: canonical, href: canonical }] : []
+      }
       meta={[
         {
           name: `description`,
@@ -70,6 +73,7 @@ Head.defaultProps = {
 }
 
 Head.propTypes = {
+  canonical: PropTypes.string,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),

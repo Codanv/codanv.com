@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+// Utilities
+import kebabCase from "lodash/kebabCase"
+
 import { Link, graphql } from "gatsby"
 
 import blogListStyles from "./blog-list.module.scss"
@@ -17,7 +20,8 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Head title={tagHeader}/>
+      <Head title={tagHeader} 
+      canonical={`https://www.codanv.com/blog/tags/${kebabCase(tag)}/`} />
       <p><Link to="/blog">← All Blog Posts</Link></p>
 
       <h1>{tagHeader}</h1>

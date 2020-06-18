@@ -1,7 +1,7 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 
-import Prism from 'prismjs'
+import Prism from "prismjs"
 import "prismjs/plugins/line-numbers/prism-line-numbers.js"
 
 // Utilities
@@ -13,35 +13,45 @@ import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
 const Blog = props => {
-
   useEffect(() => {
     Prism.highlightAll()
   }, [])
 
   return (
     <Layout>
-      <Head title={props.data.markdownRemark.frontmatter.title} />
+      <Head
+        title={props.data.markdownRemark.frontmatter.title}
+        canonical={props.data.markdownRemark.frontmatter.canonical}
+      />
       <p>
-        <Link to="/blog/">← All Blog Posts</Link>
+        <Link to="/blog">← All Blog Posts</Link>
       </p>
       <spam className={blogStyles.date}>
-      <a href={props.data.markdownRemark.frontmatter.handle} target="_blank" rel="noopener noreferrer">{props.data.markdownRemark.frontmatter.user}</a> on {props.data.markdownRemark.frontmatter.date} · {props.data.markdownRemark.timeToRead} min read 
+        <a
+          href={props.data.markdownRemark.frontmatter.handle}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {props.data.markdownRemark.frontmatter.user}
+        </a>{" "}
+        on {props.data.markdownRemark.frontmatter.date} ·{" "}
+        {props.data.markdownRemark.timeToRead} min read
       </spam>
-      <h1  className={blogStyles.title}>
+      <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
       </h1>
       <ul className={blogStyles.tags}>
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
             <li>
-            <Link to={`/blog/tags/${tag}`} className={blogStyles.tag} >
-              #{tag}
-            </Link>
+              <Link to={`/blog/tags/${tag}`} className={blogStyles.tag}>
+                #{tag}
+              </Link>
             </li>
           )
         })}
         <li className={blogStyles.viewall}>
-          <Link to="/blog/tags" > View all Tags</Link>
+          <Link to="/blog/tags"> View all Tags</Link>
         </li>
       </ul>
 
@@ -50,18 +60,21 @@ const Blog = props => {
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
 
-      <ul className={blogStyles.tags} style={{marginBottom: `3rem`}}>
+      <ul className={blogStyles.tags} style={{ marginBottom: `3rem` }}>
         {props.data.markdownRemark.frontmatter.categories.map(category => {
           return (
             <li>
-            <Link to={`/blog/categories/${kebabCase(category)}`} className={blogStyles.tag} >
-              {category}
-            </Link>
+              <Link
+                to={`/blog/categories/${kebabCase(category)}`}
+                className={blogStyles.tag}
+              >
+                {category}
+              </Link>
             </li>
           )
         })}
         <li className={blogStyles.viewall}>
-          <Link to="/blog/categories" > View all Categories</Link>
+          <Link to="/blog/categories"> View all Categories</Link>
         </li>
       </ul>
 
@@ -87,6 +100,7 @@ export const query = graphql`
         handle
         tags
         categories
+        canonical
       }
       html
       timeToRead

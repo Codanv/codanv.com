@@ -15,7 +15,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <Head title="Tags" />
+    <Head title="Tags" canonical="https://www.codanv.com/tags/" />
     <div>
       <p><Link to="/blog">← All Blog Posts</Link></p>
       <p><Link to="/blog/categories">Browse by categories?</Link></p>
