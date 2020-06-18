@@ -6,7 +6,7 @@ import Head from "../components/head"
 const ResourcePage = () => {
   return (
     <Layout>
-      <Head title="Resources" lang="en" canonical="https://www.codanv.com/resources"/>
+      <Head title="Resources" lang="en" canonical="https://www.codanv.com/resources/" />
       <h1>Resources</h1>
       <ul>
         <li>
