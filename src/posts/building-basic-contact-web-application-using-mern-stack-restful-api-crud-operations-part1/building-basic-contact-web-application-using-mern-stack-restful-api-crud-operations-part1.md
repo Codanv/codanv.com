@@ -5,7 +5,7 @@ canonical: "https://www.codanv.com/building-basic-contact-web-application-using-
 date: 2020-06-13
 user: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
-tags: ["mernstack", "backend"]
+tags: ["mernstack", "backend", "webdev"]
 categories: ["Programming"]
 ---
 
