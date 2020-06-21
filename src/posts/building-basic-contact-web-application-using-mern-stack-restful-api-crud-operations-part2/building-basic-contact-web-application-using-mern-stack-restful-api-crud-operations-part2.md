@@ -3,11 +3,13 @@ title: "Building Basic Contact Web Application using MERN Stack - Part 2"
 description: "Frontend - User Interface"
 canonical: "https://www.codanv.com/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2/"
 date: 2020-06-13
-user: 'Avinash Kumar'
+writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
 tags: ["mernstack", "frontend", "webdev"]
 categories: ["Programming"]
 ---
+
+![Contact list with update form](./mern-contact-update.png)
 
 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
 
@@ -18,8 +20,6 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 [Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)
 
 In the [second part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
-
-![Contact list with update form](./mern-contact-update.png)
 
 ### Prerequisites
 
