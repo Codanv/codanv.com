@@ -26,20 +26,13 @@ const Blog = props => {
       <p>
         <Link to="/blog">← All Blog Posts</Link>
       </p>
-      <spam className={blogStyles.date}>
-        <a
-          href={props.data.markdownRemark.frontmatter.handle}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {props.data.markdownRemark.frontmatter.user}
-        </a>{" "}
-        on {props.data.markdownRemark.frontmatter.date} ·{" "}
-        {props.data.markdownRemark.timeToRead} min read
-      </spam>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
       </h1>
+      <spam className={blogStyles.date}>
+        {props.data.markdownRemark.frontmatter.date} ·{" "}
+        {props.data.markdownRemark.timeToRead} min read
+      </spam>
       <ul className={blogStyles.tags}>
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
