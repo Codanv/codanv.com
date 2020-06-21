@@ -37,7 +37,7 @@ export default class BlogList extends React.Component {
                     >
                     <h3>{node.frontmatter.title}</h3>
                   </Link>
-                    <span className={blogListStyles.titleDetails}><a style={{display: `inline`}} href={node.frontmatter.handle} target="_blank" rel="noopener noreferrer">{node.frontmatter.user}</a> on {node.frontmatter.date} · {node.timeToRead} min read </span>
+                    <span className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read </span>
                     <p>{node.frontmatter.description}</p>
                 </li>
               </ol>
@@ -93,8 +93,6 @@ export const blogListQuery = graphql`
           frontmatter {
             date(formatString: "MMM DD, YYYY")
             title
-            user
-            handle
             description
           }
           timeToRead
