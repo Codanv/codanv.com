@@ -72,7 +72,7 @@ const Blog = props => {
       </ul>
 
       <User
-        username={props.data.markdownRemark.frontmatter.user}
+        writer={props.data.markdownRemark.frontmatter.writer}
         // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
         handle={props.data.markdownRemark.frontmatter.handle}
         excerpt="Leraning Enthusiast"
@@ -89,7 +89,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMM DD, Y")
-        user
+        writer
         handle
         tags
         categories
