@@ -8,9 +8,9 @@ const User = props => (
       {/* <img src={props.avatar} className={styles.avatar} alt="Written by" /> */}
       <span>Written by</span>
       <div className={styles.description}>
-        <Link to={props.handle}>
+        <a href={props.handle} target="_blank" rel="noopener noreferrer">
           <h2 className={styles.username}>{props.username}</h2>
-        </Link>
+        </a>
         <p className={styles.excerpt}>{props.excerpt}</p>
       </div>
     </div>
