@@ -5,8 +5,8 @@ canonical: "https://www.codanv.com/building-basic-contact-web-application-using-
 date: 2020-06-13
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
-tags: ["mernstack", "frontend", "webdev"]
-categories: ["Programming"]
+tags: ["mernstack", "frontend"]
+categories: ["Web Development"]
 ---
 
 ![Contact list with update form](./mern-contact-update.png)
