@@ -20,7 +20,7 @@ export default class BlogList extends React.Component {
         
         <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
         
-        <div style={{ marginBottom: `3rem`, display: `flex`, flexWrap: `flex-wrap`, justifyContent: `space-evenly`, alignItems: `center`}}>
+        <div style={{ marginBottom: `3rem`, display: `flex`, flexWrap: `flex-wrap`, justifyContent: `space-between`, alignItems: `center`}}>
           <Link to="/categories">Categories?</Link>{" "}
           <Link to="/tags">Tags?</Link>
         </div>
