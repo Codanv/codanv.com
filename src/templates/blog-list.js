@@ -21,8 +21,8 @@ export default class BlogList extends React.Component {
         <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
         
         <div style={{ marginBottom: `3rem`, display: `flex`, flexWrap: `flex-wrap`, justifyContent: `space-evenly`, alignItems: `center`}}>
-          <Link to="/categories">Categories?</Link>{" "}
-          <Link to="/tags">Tags?</Link>
+          <Link to="/blog/categories">Categories?</Link>{" "}
+          <Link to="/blog/tags">Tags?</Link>
         </div>
 
         {posts.map(({ node }) => {
