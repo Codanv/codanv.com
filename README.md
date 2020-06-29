@@ -1,5 +1,2 @@
-# [Codanv](https://www.codanv.com/)
+# Go to [Codanv](https://www.codanv.com/)
 
-## 🧐 What's inside?
-
-## 💫 explore :)

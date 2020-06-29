@@ -22,10 +22,10 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <Head title={tagHeader} 
       canonical={`https://www.codanv.com/blog/tags/${kebabCase(tag)}/`} />
-      <p><Link to="/blog">← All Blog Posts</Link></p>
+      <p><Link to="/blog">← All Posts</Link></p>
 
       <h1>{tagHeader}</h1>
-      <p><Link to="/blog/tags">← View all Tags?</Link></p>
+      <p><Link to="/blog/tags">← All Tags?</Link></p>
 
       <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {

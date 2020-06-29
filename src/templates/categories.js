@@ -22,13 +22,13 @@ const Categories = ({ pageContext, data }) => {
       <Head title={categoryHeader} 
       canonical={`https://www.codanv.com/blog/categories/${kebabCase(category)}/`} />
       <p>
-        <Link to="/blog">← All Blog Posts</Link>
+        <Link to="/blog">← All Posts</Link>
       </p>
       
       <h1>{categoryHeader}</h1>
 
       <p>
-        <Link to="/blog/categories">← View all Categories?</Link>
+        <Link to="/blog/categories">← All Categories</Link>
       </p>
 
       <ul className={blogListStyles.posts}>

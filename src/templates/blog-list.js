@@ -16,10 +16,10 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <Head title="All Blog Posts" canonical="https://www.codanv.com/blog/" />
-        
-        <h1>All Blog Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
-        
+      <Head title="All Blog Posts" canonical="https://www.codanv.com/blog/" />  
+      
+      <h1>Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
+      
         <div style={{ marginBottom: `3rem`, display: `flex`, flexWrap: `flex-wrap`, justifyContent: `space-evenly`, alignItems: `center`}}>
           <Link to="/blog/categories">Categories?</Link>{" "}
           <Link to="/blog/tags">Tags?</Link>

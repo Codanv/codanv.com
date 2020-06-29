@@ -17,8 +17,8 @@ const TagsPage = ({
   <Layout>
     <Head title="Tags" canonical="https://www.codanv.com/tags/" />
     <div>
-      <p><Link to="/blog">← All Blog Posts</Link></p>
-      <p><Link to="/blog/categories">Browse by categories?</Link></p>
+      <p><Link to="/blog">← All Posts</Link></p>
+      <p><Link to="/blog/categories">Categories?</Link></p>
       
       <h1>Tags</h1>
       <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>

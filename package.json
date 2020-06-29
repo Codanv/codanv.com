@@ -45,6 +45,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
+    "tailwindcss": "^1.4.6",
     "typography": "^0.16.19"
   },
   "devDependencies": {

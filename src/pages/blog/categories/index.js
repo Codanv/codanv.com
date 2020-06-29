@@ -17,8 +17,8 @@ const CategoriesPage = ({
   <Layout>
     <Head title="Categories" canonical="https://www.codanv.com/categories/" />
     <div>
-      <p><Link to="/blog">← All Blog Posts</Link></p>
-      <p><Link to="/blog/tags">Browse by tags?</Link></p>
+      <p><Link to="/blog">← All Posts</Link></p>
+      <p><Link to="/blog/tags">Tags?</Link></p>
 
       <h1>Categories</h1>
       <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>

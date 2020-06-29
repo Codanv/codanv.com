@@ -87,7 +87,16 @@ module.exports = {
     },
 
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // Configure SASS to process Tailwind
+        postCssPlugins: [
+          require('tailwindcss'),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          ],
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
