@@ -13,7 +13,8 @@ import Head from "../components/head"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  // const { edges, totalCount } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   // const tagHeader = `${totalCount} post${
   //   totalCount === 1 ? "" : "s"
   // } tagged with "${tag}"`

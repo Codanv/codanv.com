@@ -12,7 +12,8 @@ import Head from "../components/head"
 
 const Categories = ({ pageContext, data }) => {
   const { category } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  // const { edges, totalCount } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   // const categoryHeader = `${totalCount} post${
   //   totalCount === 1 ? "" : "s"
   // } with category "${category}"`
