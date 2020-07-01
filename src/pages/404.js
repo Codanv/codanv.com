@@ -8,9 +8,8 @@ const NotFound = () => {
         <Layout>
             <Head title="404" description="Page not found" lang="en" />
             <h1>Page not found</h1>
-            <p>
-                Explore <Link to="/">Codanv landing page</Link>
-            </p>
+            <small>find your interests from here</small>
+            <p><Link to="/">Codanv landing page</Link></p>
         </Layout>
     )
 }
