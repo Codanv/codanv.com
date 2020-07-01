@@ -77,7 +77,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   // Make tag pages
   tags.forEach(tag => {
     createPage({
-      path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
@@ -91,7 +91,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   // Make category pages
   categories.forEach(category => {
     createPage({
-      path: `/blog/categories/${_.kebabCase(category.fieldValue)}/`,
+      path: `/categories/${_.kebabCase(category.fieldValue)}/`,
       component: categoryTemplate,
       context: {
         category: category.fieldValue,

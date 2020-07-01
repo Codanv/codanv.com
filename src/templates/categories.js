@@ -13,23 +13,19 @@ import Head from "../components/head"
 const Categories = ({ pageContext, data }) => {
   const { category } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const categoryHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } with category "${category}"`
+  // const categoryHeader = `${totalCount} post${
+  //   totalCount === 1 ? "" : "s"
+  // } with category "${category}"`
+  const categoryHeader = `${category}`
 
   return (
     <Layout>
       <Head title={categoryHeader} 
       canonical={`https://www.codanv.com/blog/categories/${kebabCase(category)}/`} />
-      <p>
-        <Link to="/blog">← All Posts</Link>
-      </p>
+      <p><Link to="/blog">← All Posts</Link></p>
       
-      <h1>{categoryHeader}</h1>
-
-      <p>
-        <Link to="/blog/categories">← All Categories</Link>
-      </p>
+      <small><Link to="/categories"> All Categories</Link></small>
+      <h1 style={{marginBottom: `3rem`}}>{categoryHeader}</h1>
 
       <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {

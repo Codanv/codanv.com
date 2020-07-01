@@ -37,14 +37,14 @@ const Blog = props => {
         {props.data.markdownRemark.frontmatter.tags.map(tag => {
           return (
             <li>
-              <Link to={`/blog/tags/${tag}`} className={blogStyles.tag}>
+              <Link to={`/tags/${tag}`} className={blogStyles.tag}>
                 #{tag}
               </Link>
             </li>
           )
         })}
         <li className={blogStyles.viewall}>
-          <Link to="/blog/tags"> View all Tags</Link>
+          <Link to="/tags"> All Tags</Link>
         </li>
       </ul>
 
@@ -58,8 +58,8 @@ const Blog = props => {
           return (
             <li>
               <Link
-                to={`/blog/categories/${kebabCase(category)}`}
-                className={blogStyles.tag}
+                to={`/categories/${kebabCase(category)}`}
+                className={blogStyles.category}
               >
                 {category}
               </Link>
@@ -67,7 +67,7 @@ const Blog = props => {
           )
         })}
         <li className={blogStyles.viewall}>
-          <Link to="/blog/categories"> View all Categories</Link>
+          <Link to="/categories"> All Categories</Link>
         </li>
       </ul>
 

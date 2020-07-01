@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 // Components
-import Head from "../../../components/head"
-import Layout from "../../../components/layout"
+import Head from "../components/head"
+import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
 const TagsPage = ({
@@ -17,14 +17,13 @@ const TagsPage = ({
   <Layout>
     <Head title="Tags" canonical="https://www.codanv.com/tags/" />
     <div>
-      <p><Link to="/blog">← All Posts</Link></p>
-      <p><Link to="/blog/categories">Categories?</Link></p>
+      <p><Link to="/blog">← All Posts</Link> | <Link to="/categories">Categories</Link></p>
       
       <h1>Tags</h1>
       <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               <span style={{fontSize: `1rem`}} >#{tag.fieldValue} ({tag.totalCount})</span>
             </Link>
           </li>

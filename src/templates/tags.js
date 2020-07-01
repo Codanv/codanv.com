@@ -14,18 +14,19 @@ import Head from "../components/head"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
-
+  // const tagHeader = `${totalCount} post${
+  //   totalCount === 1 ? "" : "s"
+  // } tagged with "${tag}"`
+  const tagHeader = `${tag}`
+  
   return (
     <Layout>
       <Head title={tagHeader} 
       canonical={`https://www.codanv.com/blog/tags/${kebabCase(tag)}/`} />
       <p><Link to="/blog">← All Posts</Link></p>
 
-      <h1>{tagHeader}</h1>
-      <p><Link to="/blog/tags">← All Tags?</Link></p>
+      <small><Link to="/tags">All Tags</Link></small>
+      <h1 style={{marginBottom: `3rem`}}>{tagHeader}</h1>
 
       <ul className={blogListStyles.posts}>
         {edges.map(({ node }) => {

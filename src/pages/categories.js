@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 // Components
-import Head from "../../../components/head"
-import Layout from "../../../components/layout"
+import Head from "../components/head"
+import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
 const CategoriesPage = ({
@@ -17,14 +17,13 @@ const CategoriesPage = ({
   <Layout>
     <Head title="Categories" canonical="https://www.codanv.com/categories/" />
     <div>
-      <p><Link to="/blog">← All Posts</Link></p>
-      <p><Link to="/blog/tags">Tags?</Link></p>
-
+      <p><Link to="/blog">← All Posts</Link> | <Link to="/tags">Tags</Link></p>
+      
       <h1>Categories</h1>
       <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>
         {group.map(category => (
           <li key={category.fieldValue}>
-            <Link to={`/blog/categories/${kebabCase(category.fieldValue)}/`}>
+            <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
         <span style={{fontSize: `1rem`, textDecoration: `underline`, marginRight: `0.5rem`}}>{category.fieldValue} ({category.totalCount})</span>
             </Link>
           </li>
