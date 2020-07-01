@@ -5,8 +5,8 @@ canonical: "https://www.codanv.com/mern-crud-example-part1/"
 date: 2020-06-13
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
-tags: ["mernstack", "backend"]
-categories: ["Web Development"]
+tags: ["mernstack", "backend", "webdev"]
+categories: ["Programming"]
 ---
 
 ![Contact list with create form](./mern-contact-add.png)
