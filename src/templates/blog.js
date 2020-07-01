@@ -24,7 +24,7 @@ const Blog = props => {
         canonical={props.data.markdownRemark.frontmatter.canonical}
       />
       <p>
-        <Link to="/blog">← All Blog Posts</Link>
+        <Link to="/blog">← All Posts</Link>
       </p>
       <h1 className={blogStyles.title}>
         {props.data.markdownRemark.frontmatter.title}
