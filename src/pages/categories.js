@@ -20,11 +20,11 @@ const CategoriesPage = ({
       <p><Link to="/blog">← All Posts</Link> | <Link to="/tags">Tags</Link></p>
       
       <h1>Categories</h1>
-      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, justifyContent: `space-evenly`, flexWrap: `wrap`}}>
+      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
         {group.map(category => (
           <li key={category.fieldValue}>
             <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
-        <span style={{fontSize: `1rem`, textDecoration: `underline`, marginRight: `0.5rem`}}>{category.fieldValue} ({category.totalCount})</span>
+        <span style={{fontSize: `1.2rem`, textDecoration: `underline`, marginRight: `1.2rem`}}>{category.fieldValue} ({category.totalCount})</span>
             </Link>
           </li>
         ))}
