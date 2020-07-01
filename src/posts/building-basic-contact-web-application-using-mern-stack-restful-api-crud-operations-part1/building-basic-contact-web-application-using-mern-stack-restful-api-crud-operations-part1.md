@@ -1,7 +1,7 @@
 ---
-title: "Building Basic Contact Web Application using MERN Stack - Part 1"
-description: "Backend - RESTful API, CRUD Operations"
-canonical: "https://www.codanv.com/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part1/"
+title: "MERN CRUD Example - Part 1"
+description: "Backend ~ API"
+canonical: "https://www.codanv.com/mern-crud-example-part1/"
 date: 2020-06-13
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
