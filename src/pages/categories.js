@@ -11,15 +11,13 @@ import { Link, graphql } from "gatsby"
 
 const CategoriesPage = ({
   data: {
-    allMarkdownRemark: { group },
+    allMdx: { group },
   },
 }) => (
   <Layout>
     <Head title="Categories" canonical="https://www.codanv.com/categories/" />
     <div>
-      <p><Link to="/blog">← All Posts</Link> | <Link to="/tags">Tags</Link></p>
-      
-      <h1>Categories</h1>
+      <h1>All Categories</h1>
       <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
         {group.map(category => (
           <li key={category.fieldValue}>
@@ -35,7 +33,7 @@ const CategoriesPage = ({
 
 CategoriesPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       group: PropTypes.arrayOf(
         PropTypes.shape({
           fieldValue: PropTypes.string.isRequired,
@@ -55,7 +53,7 @@ export default CategoriesPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(limit: 2000) {
+    allMdx(limit: 2000) {
       group(field: frontmatter___categories) {
         fieldValue
         totalCount

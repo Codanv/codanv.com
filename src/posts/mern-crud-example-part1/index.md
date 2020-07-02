@@ -1,7 +1,7 @@
 ---
 title: "MERN CRUD Example - Part 1"
 description: "Backend ~ API"
-canonical: "https://www.codanv.com/mern-crud-example-part1/"
+canonical: "https://www.codanv.com/posts/mern-crud-example-part1/"
 date: 2020-06-13
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
@@ -15,13 +15,13 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 ## Part1: Back-end/server-side (Express/Node/Mongodb)
 
-[Part1: Back-end/server-side (Express/Node/Mongodb)](/blog/building-basic-contact-web-application-using-mern-stack-crud-operations-part1)
+[Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)
 
-[Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)
+[Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
 
-In the [first part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part1)) of the tutorial we are going to create back-end for our basic contact web application.
+In the [first part]((/posts/mern-crud-example-part1)) of the tutorial we are going to create back-end for our basic contact web application.
 
-*At the end of [part2](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) we'll have source code of the project.*
+*At the end of [part2](/posts/mern-crud-example-part2) we'll have source code of the project.*
 
 ### Prerequisites
 
@@ -112,7 +112,7 @@ So your `package.json` looks like the following
 create `server.js` file with following code in the root of `mern-stack-contact-app` project directory
 
 **server.js**
-```javascript
+```javascript{numberLines: 5}
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -167,7 +167,7 @@ Okay! Let's create some HTTP endpoints (RESTful api for CRUD Operations) to
 
 *Let's see snippets for CRUD Operations, Don't worry, we'll add them in server.js later.*
 
-**`To Read Contact`**
+**To Read Contact**
 ```js
 app.get("/contacts", (req, res) => {
   db.collection("contacts")
@@ -179,7 +179,7 @@ app.get("/contacts", (req, res) => {
 });
 ```
 
-**`To Create Contact`**
+**To Create Contact**
 ```js
 app.post("/contacts/create", (req, res) => {
   db.collection("contacts").insertOne(req.body, (err) => {
@@ -190,7 +190,7 @@ app.post("/contacts/create", (req, res) => {
 });
 ```
 
-**`To Update Contact`**
+**To Update Contact**
 ```js
 app.put("/contacts/update", (req, res) => {
   const { _id, ...rest } = req.body;
@@ -206,7 +206,7 @@ app.put("/contacts/update", (req, res) => {
 });
 ```
 
-**`To Delete Contact`**
+**To Delete Contact**
 ```js
 app.delete("/contacts/delete", (req, res) => {
   db.collection("contacts").deleteOne(
@@ -296,4 +296,4 @@ app.listen(3001, () => {
 
 That's all from server-side!
 
-We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2) to complete the party 👍
+We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/posst/mern-crud-example-part2) to complete the party 👍

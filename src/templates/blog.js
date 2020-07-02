@@ -1,8 +1,9 @@
-import React, { useEffect } from "react"
+import React, {useEffect} from "react"
 import { graphql, Link } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Prism from "prismjs"
-import "prismjs/plugins/line-numbers/prism-line-numbers.js"
+// import Prism from "prismjs"
+// import "prismjs/plugins/line-numbers/prism-line-numbers.js"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
@@ -12,29 +13,32 @@ import Head from "../components/head"
 import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
 const Blog = props => {
   useEffect(() => {
-    Prism.highlightAll()
+    // Prism.highlightAll()
+    deckDeckGoHighlightElement();
   }, [])
+
+
 
   return (
     <Layout>
       <Head
-        title={props.data.markdownRemark.frontmatter.title}
-        canonical={props.data.markdownRemark.frontmatter.canonical}
+        title={props.data.mdx.frontmatter.title}
+        canonical={props.data.mdx.frontmatter.canonical}
       />
-      <p>
-        <Link to="/blog">← All Posts</Link>
-      </p>
+      
       <h1 className={blogStyles.title}>
-        {props.data.markdownRemark.frontmatter.title}
+        {props.data.mdx.frontmatter.title}
       </h1>
       <spam className={blogStyles.date}>
-        {props.data.markdownRemark.frontmatter.date} ·{" "}
-        {props.data.markdownRemark.timeToRead} min read
+        {props.data.mdx.frontmatter.date} ·{" "}
+        {props.data.mdx.timeToRead} min read
       </spam>
       <ul className={blogStyles.tags}>
-        {props.data.markdownRemark.frontmatter.tags.map(tag => {
+        {props.data.mdx.frontmatter.tags.map(tag => {
           return (
             <li>
               <Link to={`/tags/${tag}`} className={blogStyles.tag}>
@@ -48,13 +52,14 @@ const Blog = props => {
         </li>
       </ul>
 
-      <div
+      {/* <div
         className={blogStyles.content}
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+        dangerouslySetInnerHTML={{ __html: props.data.mdx.html }}
+      ></div> */}
+      <MDXRenderer className={blogStyles.content}>{props.data.mdx.body}</MDXRenderer>
 
       <ul className={blogStyles.tags} style={{ marginBottom: `3rem` }}>
-        {props.data.markdownRemark.frontmatter.categories.map(category => {
+        {props.data.mdx.frontmatter.categories.map(category => {
           return (
             <li>
               <Link
@@ -72,9 +77,9 @@ const Blog = props => {
       </ul>
 
       <User
-        writer={props.data.markdownRemark.frontmatter.writer}
+        writer={props.data.mdx.frontmatter.writer}
         // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-        handle={props.data.markdownRemark.frontmatter.handle}
+        handle={props.data.mdx.frontmatter.handle}
         excerpt="Leraning Enthusiast"
       />
     </Layout>
@@ -85,7 +90,7 @@ export default Blog
 
 export const query = graphql`
   query($slug: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         date(formatString: "MMM DD, Y")
@@ -95,7 +100,7 @@ export const query = graphql`
         categories
         canonical
       }
-      html
+      body
       timeToRead
     }
   }

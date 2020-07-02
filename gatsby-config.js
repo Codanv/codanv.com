@@ -9,8 +9,16 @@ module.exports = {
     siteUrl: `https://www.codanv.com/`,
     menuLinks:[
       {
-        name: 'blog',
-        link: '/blog'
+        name: 'posts',
+        link: '/posts'
+      },     
+      {
+        name: 'categories',
+        link: '/categories'
+      },     
+      {
+        name: 'tags',
+        link: '/tags'
       },     
       {
         name: 'resources',
@@ -33,7 +41,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `
           {
@@ -49,20 +57,20 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + `/` + edge.node.fields.slug + `/`,
-                  guid: site.siteMetadata.siteUrl + `/` + edge.node.fields.slug + `/`,
+                  url: site.siteMetadata.siteUrl + `/posts` + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + `/posts` + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
@@ -104,9 +112,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      // resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        // plugins: [
+          gatsbyRemarkPlugins: [
           `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -133,10 +144,20 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      // resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        // plugins: [
+        gatsbyRemarkPlugins: [
           'gatsby-remark-relative-images',
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'night-owl',
+              lineNumbers: true
+            }
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {

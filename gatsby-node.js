@@ -4,8 +4,8 @@ const _ = require("lodash")
 
 module.exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md")
+  if (node.internal.type === "Mdx") {
+    const slug = createFilePath({ node, getNode, basePath: `posts` })
     createNodeField({
       node,
       name: `slug`,
@@ -23,7 +23,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const res = await graphql(`
     query {
-      postsRemark: allMarkdownRemark(
+      postsRemark: allMdx(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 2000
       ) {
@@ -39,12 +39,12 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+      tagsGroup: allMdx(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
         }
       }
-      categoriesGroup: allMarkdownRemark(limit: 2000) {
+      categoriesGroup: allMdx(limit: 2000) {
         group(field: frontmatter___categories) {
           fieldValue
         }
@@ -63,7 +63,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create post detail pages
   posts.forEach(({ node }) => {
     createPage({
-      path: `/blog/${node.fields.slug}/`,
+      path: `/posts${node.fields.slug}`,
       component: blogTemplate,
       context: {
         slug: node.fields.slug,
@@ -105,7 +105,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
+      path: i === 0 ? `/posts/` : `/posts/${i + 1}`,
       component: path.resolve("./src/templates/blog-list.js"),
       context: {
         limit: postsPerPage,
@@ -116,10 +116,10 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  //   res.data.allMarkdownRemark.edges.forEach(edge => {
+  //   res.data.allMdx.edges.forEach(edge => {
   //     createPage({
   //       component: blogTemplate,
-  //       path: `/blog/${edge.node.fields.slug}`,
+  //       path: `/post/${edge.node.fields.slug}`,
   //       context: {
   //         slug: edge.node.fields.slug,
   //       },

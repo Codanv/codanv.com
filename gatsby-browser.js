@@ -1,2 +1,3 @@
 // import './src/css/global.scss'
-require("prismjs/themes/prism-okaidia.css")
+// require("prismjs/themes/prism-okaidia.css")
+

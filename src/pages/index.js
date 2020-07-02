@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
@@ -11,9 +12,10 @@ import Head from "../components/head"
 
 const IndexPage = ({
   data: {
-    allMarkdownRemark: { group },
+    allMdx: { group },
   },
 }) => {
+
   return (
     <Layout>
       <Head title="Home" lang="en" canonical="https://www.codanv.com/" />
@@ -29,13 +31,12 @@ const IndexPage = ({
           {group.map(category => (
             <Link
               key={category.fieldValue}
-              to={`/blog/categories/${kebabCase(category.fieldValue)}/`}
+              to={`/categories/${kebabCase(category.fieldValue)}/`}
             >
               <li className={indexStyles.domain}>{category.fieldValue}</li>
             </Link>
           ))}
         </ul>
-       
       </div>
     </Layout>
   )
@@ -45,7 +46,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark(limit: 2000) {
+    allMdx(limit: 2000) {
       group(field: frontmatter___categories) {
         fieldValue
       }

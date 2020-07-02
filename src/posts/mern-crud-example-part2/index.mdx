@@ -1,7 +1,7 @@
 ---
 title: "MERN CRUD Example - Part 2"
 description: "Frontend - UI"
-canonical: "https://www.codanv.com/mern-crud-example-part2/"
+canonical: "https://www.codanv.com/posts/mern-crud-example-part2/"
 date: 2020-06-13
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
@@ -15,11 +15,11 @@ Building a basic contact web application using MongoDB, Express, React and Node 
 
 ## Part2: Front-end/client-side(React)
 
-[Part1: Back-end/server-side (Express/Node/Mongodb)](/blog/building-basic-contact-web-application-using-mern-stack-crud-operations-part1)
+[Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)
 
-[Part2: Front-end/client-side (React)](/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)
+[Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
 
-In the [second part]((/blog/building-basic-contact-web-application-using-mern-stack-restful-api-crud-operations-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
+In the [second part]((/posts/mern-crud-example-part2)) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
 
 ### Prerequisites
 
@@ -56,7 +56,7 @@ create `App.js` and `index.js` files in `client/src` directory
 Here is the code for `index.js` where we simply rendering our `App` component
 
 **index.js**
-```js
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -98,7 +98,7 @@ Wait...
 What! we need to use hooks. nope! no problem :)
 
 **App.js**
-```js
+```jsx
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -126,7 +126,7 @@ Create a directory `components` in the root of `client/src` directory
 Add `ContactTable.js` file in components directory
 
 **ContactTable.js**
-```js
+```jsx
 import React from "react";
 
 const ContactTable = (props) => {
@@ -182,7 +182,7 @@ Cool :)
 Let's have the user interface for creating contact - add `AddContactForm.js` to the `components` directory
 
 **AddContactForm.js**
-```js
+```jsx
 import React, { useState } from "react";
 
 const AddContactForm = (props) => {
@@ -259,7 +259,7 @@ Add `EditContactForm.js` to the `components` directory, so that we can update co
 This is almost similar as `AddContactForm` 
 
 **EditContactForm.js**
-```js 
+```jsx 
 import React, { useState, useEffect } from "react";
 
 const EditContactForm = (props) => {
@@ -344,7 +344,7 @@ export default EditContactForm;
 Good! We need to add some functions to `App.js` which are passed as props to `ContactTable.js`, `AddContactForm.js` and `EditContactForm.js`
 
 **App.js**
-```js
+```jsx
 import React, { useState, useEffect } from "react";
 
 // importing the components so that we can pass functions as props
@@ -483,10 +483,10 @@ $ npm run start
 Congratulations! 👍
 
 
-[Part1: Back-end/server-side (Express/Node/Mongodb)](/blog/building-basic-contact-web-application-using-mern-stack-crud-operations-part1)
+[Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)
 
 If you have any question related to this post **[discuss here](https://twitter.com/avinashkumar_2/status/1271618727855796224)**
 
 **[Download/Clone the Source Code](https://github.com/Codanv/mern-stack-contact-app)**
 
-Happy Coding :)
+<button onClick={() => alert(`Happy Coding 😊`)}>Hold dear 💜</button>

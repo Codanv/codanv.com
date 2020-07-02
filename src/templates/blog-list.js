@@ -6,8 +6,8 @@ import blogListStyles from "./blog-list.module.scss"
 
 export default class BlogList extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
+    const posts = this.props.data.allMdx.edges
+    const totalCount = this.props.data.allMdx.totalCount
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
@@ -16,22 +16,17 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-      <Head title="All Blog Posts" canonical="https://www.codanv.com/blog/" />  
+      <Head title="All Blog Posts" canonical="https://www.codanv.com/posts/" />  
       
-      <h1>Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
+      <h1 style={{marginBottom: `3rem`}}>All Posts <small className={blogListStyles.totalCount}>{`${totalCount}`}</small></h1>
       
-        <div style={{ marginBottom: `3rem`}}>
-          <Link to="/categories">Categories</Link>{" | "}
-          <Link to="/tags">Tags</Link>
-        </div>
-
         {posts.map(({ node }) => {
           return (
               <ol className={blogListStyles.posts}>
                 <li key={node.fields.slug} className={blogListStyles.post}>
                   <Link
                     style={{ boxShadow: "none",  }}
-                    to={`/blog/${node.fields.slug}`}
+                    to={`/posts/${node.fields.slug}`}
                     >
                     <h3>{node.frontmatter.title}</h3>
                   </Link>
@@ -44,7 +39,7 @@ export default class BlogList extends React.Component {
 
         <ul className={blogListStyles.pageNavigationList}>
           {!isFirst && (
-            <Link to={`/blog/${prevPage}`} rel="prev">
+            <Link to={`/posts/${prevPage}`} rel="prev">
               ← Previous Page
             </Link>
           )}
@@ -52,7 +47,7 @@ export default class BlogList extends React.Component {
           {Array.from({ length: numPages }, (_, i) => (
             <Link
               key={`pagination-number${i + 1}`}
-              to={`/blog/${i === 0 ? "" : i + 1}`}
+              to={`/posts/${i === 0 ? "" : i + 1}`}
               style={{
                 // padding: rhythm(1 / 4),
                 textDecoration: "none",
@@ -66,7 +61,7 @@ export default class BlogList extends React.Component {
           ))}
 
           {!isLast && (
-            <Link to={`/blog/${nextPage}`} rel="next">
+            <Link to={`/posts/${nextPage}`} rel="next">
               Next Page →
             </Link>
           )}
@@ -78,7 +73,7 @@ export default class BlogList extends React.Component {
 
 export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
@@ -100,4 +95,3 @@ export const blogListQuery = graphql`
     }
   }
 `
-
