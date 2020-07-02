@@ -19,11 +19,7 @@ module.exports = {
       {
         name: 'tags',
         link: '/tags'
-      },     
-      {
-        name: 'resources',
-        link: '/resources'
-      }
+      },          
     ]
   },
   plugins: [

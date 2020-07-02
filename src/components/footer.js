@@ -16,18 +16,40 @@ const Footer = () => {
     return (
 
     <footer className={FooterStyles.footer}>
-          <ul>
-            <li>{data.site.siteMetadata.title} © 2020</li>
-            <li>
-                <a href="https://twitter.com/codanv" rel="noopener noreferrer" target="_blank">Twitter</a>
-            </li>
-            <li>
-                <a href="https://instagram.com/thecodanv" rel="noopener noreferrer" target="_blank">Instagram</a>
-            </li>
-            <li>
-                <Link to="/rss.xml">rss</Link>
-            </li>
-        </ul>
+        <hr />
+        <div style={{
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            flexWrap: `wrap`
+        }}>
+            <div>
+                <ul>
+                <li>
+                    <Link to="/resources">Resources</Link>
+                </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                <li>
+                    <a href="https://twitter.com/codanv" rel="noopener noreferrer" target="_blank">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/thecodanv" rel="noopener noreferrer" target="_blank">Instagram</a>
+                </li>
+                </ul>
+            </div>
+            <div>
+            <ul>
+                <li>
+                    <Link to="/rss.xml">RSS</Link>
+                </li>
+            </ul>
+            </div>
+        </div>
+          
+          <p style={{textAlign: 'center'}}>{data.site.siteMetadata.title} © 2020</p>
     </footer>              
     )
 }
