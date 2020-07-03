@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 600px) {
     .header {
-        // flex-direction: column;
+        flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
     }
