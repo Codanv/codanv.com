@@ -24,65 +24,63 @@ const Blog = props => {
 
 
   return (
-    <Layout>
+    <>
       <Head
         title={props.data.mdx.frontmatter.title}
         canonical={props.data.mdx.frontmatter.canonical}
       />
-      
-      <h1 className={blogStyles.title}>
-        {props.data.mdx.frontmatter.title}
-      </h1>
-      <spam className={blogStyles.date}>
-        {props.data.mdx.frontmatter.date} ·{" "}
-        {props.data.mdx.timeToRead} min read
-      </spam>
-      <ul className={blogStyles.tags}>
-        {props.data.mdx.frontmatter.tags.map(tag => {
-          return (
-            <li>
-              <Link to={`/tags/${tag}`} className={blogStyles.tag}>
-                #{tag}
-              </Link>
-            </li>
-          )
-        })}
-        <li className={blogStyles.viewall}>
-          <Link to="/tags"> All Tags</Link>
-        </li>
-      </ul>
+      <Layout>
+        <h1 className={blogStyles.title}>
+          {props.data.mdx.frontmatter.title}
+        </h1>
+        <spam className={blogStyles.date}>
+          {props.data.mdx.frontmatter.date} ·{" "}
+          {props.data.mdx.timeToRead} min read
+        </spam>
+        <ul className={blogStyles.tags}>
+          {props.data.mdx.frontmatter.tags.map(tag => {
+            return (
+              <li>
+                <Link to={`/tags/${tag}`} className={blogStyles.tag}>
+                  #{tag}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
 
-      {/* <div
-        className={blogStyles.content}
-        dangerouslySetInnerHTML={{ __html: props.data.mdx.html }}
-      ></div> */}
-      <MDXRenderer className={blogStyles.content}>{props.data.mdx.body}</MDXRenderer>
+        {/* <div
+          className={blogStyles.content}
+          dangerouslySetInnerHTML={{ __html: props.data.mdx.html }}
+        ></div> */}
+        <MDXRenderer className={blogStyles.content}>{props.data.mdx.body}</MDXRenderer>
 
-      <ul className={blogStyles.tags} style={{ marginBottom: `3rem` }}>
-        {props.data.mdx.frontmatter.categories.map(category => {
-          return (
-            <li>
-              <Link
-                to={`/categories/${kebabCase(category)}`}
-                className={blogStyles.category}
-              >
-                {category}
-              </Link>
-            </li>
-          )
-        })}
-        <li className={blogStyles.viewall}>
-          <Link to="/categories"> All Categories</Link>
-        </li>
-      </ul>
+        <ul className={blogStyles.tags} style={{ marginBottom: `3rem` }}>
+          {props.data.mdx.frontmatter.categories.map(category => {
+            return (
+              <li>
+                <Link
+                  to={`/categories/${kebabCase(category)}`}
+                  className={blogStyles.tag}
+                >
+                  {category}
+                </Link>
+              </li>
+            )
+          })}
+          <li>
+            <Link to="/categories"> All Categories</Link>
+          </li>
+        </ul>
 
-      <User
-        writer={props.data.mdx.frontmatter.writer}
-        // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-        handle={props.data.mdx.frontmatter.handle}
-        excerpt="Leraning Enthusiast"
-      />
-    </Layout>
+        <User
+          writer={props.data.mdx.frontmatter.writer}
+          // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+          handle={props.data.mdx.frontmatter.handle}
+          excerpt="Leraning Enthusiast"
+        />
+      </Layout>
+    </>
   )
 }
 

@@ -14,21 +14,23 @@ const CategoriesPage = ({
     allMdx: { group },
   },
 }) => (
-  <Layout>
+  <>
     <Head title="Categories" canonical="https://www.codanv.com/categories/" />
-    <div>
-      <h1>All Categories</h1>
-      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
-        {group.map(category => (
-          <li key={category.fieldValue}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
-        <span style={{fontSize: `1.2rem`, textDecoration: `underline`, marginRight: `1.2rem`}}>{category.fieldValue} ({category.totalCount})</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </Layout>
+    <Layout>
+      <div>
+        <h1>All Categories</h1>
+        <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
+          {group.map(category => (
+            <li key={category.fieldValue}>
+              <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
+          <span style={{fontSize: `1.2rem`, textDecoration: `underline`, marginRight: `1.2rem`}}>{category.fieldValue} ({category.totalCount})</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  </>
 )
 
 CategoriesPage.propTypes = {

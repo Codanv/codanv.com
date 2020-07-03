@@ -9,20 +9,19 @@ tags: ["mernstack", "backend", "webdev"]
 categories: ["Programming"]
 ---
 
-![Contact list with create form](./mern-contact-add.png)
-
 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
 
-## Part1: Back-end/server-side (Express/Node/Mongodb)
+> [Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)<br />
+> [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
 
-[Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)
+## Back-end/server-side (Express/Node/Mongodb)
 
-[Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
 
 In the [first part]((/posts/mern-crud-example-part1)) of the tutorial we are going to create back-end for our basic contact web application.
 
 *At the end of [part2](/posts/mern-crud-example-part2) we'll have source code of the project.*
 
+![Contact list with create form](./mern-contact-add.png)
 ### Prerequisites
 
 [node.js](https://nodejs.org/en/download/)
@@ -112,7 +111,7 @@ So your `package.json` looks like the following
 create `server.js` file with following code in the root of `mern-stack-contact-app` project directory
 
 **server.js**
-```javascript{numberLines: 5}
+```javascript
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");

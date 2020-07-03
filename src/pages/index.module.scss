@@ -1,36 +1,14 @@
 
-.blog-link {
-    background-color: #484384; 
-    padding: 0.3rem 0.4rem;
-    border-radius: 0.3rem;
-    a {
-        color: #ffffff;
-    }
-}
-
 .title {
-    font-size: 3rem;
-    text-align: center;
-}
- 
-.domain {
-    margin-top: 0.5rem;
-    
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    // text-align: center;
-    background:  #e4e4e4;
-    margin-right: 0.5rem;
-    
-    border-radius: 0.5rem;
-    list-style-type: none;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.domains {
-    // text-align: center;
-    
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+html, body {
+    background-image: linear-gradient(to right, #6c9254, #d0644d, #f1b148, #41a7ec);
+}
+
+.avi {
+    color: #000000;    
+    text-decoration: none;
 }

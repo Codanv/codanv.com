@@ -20,31 +20,32 @@ const Categories = ({ pageContext, data }) => {
   const categoryHeader = `${category}`
 
   return (
-    <Layout>
+    <>
       <Head title={categoryHeader} 
       canonical={`https://www.codanv.com/categories/${kebabCase(category)}/`} />
-            
-      <small>IN CATEGORIES</small>
-      <h1 style={{marginBottom: `3rem`}}>{categoryHeader}</h1>
+      <Layout>
+        <small>IN CATEGORIES</small>
+        <h1 style={{marginBottom: `3rem`}}>{categoryHeader}</h1>
 
-      <ul className={blogListStyles.posts}>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug} className={blogListStyles.post} >
-              <Link to={`/posts/${slug}/`}>
-                <h3>{title}</h3>
-              </Link>
-              <span className={blogListStyles.titleDetails}>
-                {node.frontmatter.date} · {node.timeToRead} min read 
-              </span>
-              <p>{node.frontmatter.description}</p>
-            </li>
-          )
-        })}
-      </ul>
-    </Layout>
+        <ul className={blogListStyles.posts}>
+          {edges.map(({ node }) => {
+            const { slug } = node.fields
+            const { title } = node.frontmatter
+            return (
+              <li key={slug} className={blogListStyles.post} >
+                <Link to={`/posts/${slug}/`}>
+                  <h3>{title}</h3>
+                </Link>
+                <span className={blogListStyles.titleDetails}>
+                  {node.frontmatter.date} · {node.timeToRead} min read 
+                </span>
+                <p>{node.frontmatter.description}</p>
+              </li>
+            )
+          })}
+        </ul>
+      </Layout>
+    </>
   )
 }
 

@@ -14,22 +14,23 @@ const TagsPage = ({
     allMdx: { group },
   },
 }) => (
-  <Layout>
+  <>
     <Head title="Tags" canonical="https://www.codanv.com/tags/" />
-    <div>
-            
-      <h1>All Tags</h1>
-      <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              <span style={{fontSize: `1.1rem`, marginRight: `1.1rem`}} >#{tag.fieldValue} ({tag.totalCount})</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </Layout>
+    <Layout>
+      <div>
+        <h1>All Tags</h1>
+        <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
+          {group.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                <span style={{fontSize: `1.1rem`, marginRight: `1.1rem`}} >#{tag.fieldValue} ({tag.totalCount})</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  </>
 )
 
 TagsPage.propTypes = {

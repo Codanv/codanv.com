@@ -3,10 +3,9 @@
 }
 
 .date {
-    color: #000000;
+    color: #050505;
     font-size: .8rem;
     margin-bottom: 0.5rem;
-    color: #505050;
 }
 
 .content {
@@ -27,30 +26,12 @@
         .tag {
           margin-right: 1rem;
         }    
-        .category {
-            margin-right: 1rem;
-            text-decoration: underline;
-            text-decoration-thickness: 0.1rem;
-            text-decoration-color: #484384;
-        }
     }
 
-    .viewall {
-        a {
-            color: #484384;
-            background: #e4e4e4;
-            padding: 0.2rem;
-            border-radius: 0.2rem;
-        }
-    }
-}
-
-a {
-    text-decoration: none;
 }
 
 pre, code {
-    background: #e5e5e5;
+    background: #e4e4e4;
     color: #dc5843;
     font-style: italic;
     padding: 0 0.3rem;
@@ -59,8 +40,8 @@ pre, code {
 }
 
 blockquote {
-    border-left: 0.8rem solid #dc5843;
-    background: #484384;
+    border-left: 0.8rem solid #001221;
+    background: #6c9254;
     color: #ffffff;
     border-radius: 0.2rem;
     padding: 1.2rem;

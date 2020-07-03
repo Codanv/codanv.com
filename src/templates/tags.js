@@ -21,31 +21,32 @@ const Tags = ({ pageContext, data }) => {
   const tagHeader = `${tag}`
   
   return (
-    <Layout>
+    <>
       <Head title={tagHeader} 
       canonical={`https://www.codanv.com/tags/${kebabCase(tag)}/`} />
-    
-      <small>IN TAGS</small>
-      <h1 style={{marginBottom: `3rem`}}>{tagHeader}</h1>
+      <Layout>
+        <small>IN TAGS</small>
+        <h1 style={{marginBottom: `3rem`}}>{tagHeader}</h1>
 
-      <ul className={blogListStyles.posts}>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug} className={blogListStyles.post}>
-              <Link to={`/posts/${slug}/`}>
-               <h3>{title}</h3>
-              </Link>
-              <span className={blogListStyles.titleDetails}>
-                {node.frontmatter.date} · {node.timeToRead} min read 
-              </span>
-              <p>{node.frontmatter.description}</p>
-            </li>
-          )
-        })}
-      </ul>
-    </Layout>
+        <ul className={blogListStyles.posts}>
+          {edges.map(({ node }) => {
+            const { slug } = node.fields
+            const { title } = node.frontmatter
+            return (
+              <li key={slug} className={blogListStyles.post}>
+                <Link to={`/posts/${slug}/`}>
+                <h3>{title}</h3>
+                </Link>
+                <span className={blogListStyles.titleDetails}>
+                  {node.frontmatter.date} · {node.timeToRead} min read 
+                </span>
+                <p>{node.frontmatter.description}</p>
+              </li>
+            )
+          })}
+        </ul>
+      </Layout>
+    </>
   )
 }
 

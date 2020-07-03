@@ -30,9 +30,9 @@ const Header = () => {
   return (
 
     <header className={headerStyles.header}>
-     
+
       <div className={headerStyles.logo}>
-        <Link to="/" >
+        <Link to="/" style={{background: `#ffffff`, padding: `0.2rem`, borderRadius: `0.2rem`}}>
           {/* <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} /> */}
           <span style={{color: `#d0644d`}}>Co</span><span style={{color: `#6c9254`}}>d</span><span style={{color: `#f1b148`}}>an</span><sapn style={{color: `#41a7ec`}}>v</sapn>
         </Link>
@@ -45,7 +45,8 @@ const Header = () => {
               key={link.name}
               className={headerStyles.link}
             >
-              <Link to={link.link} activeClassName={headerStyles.activelink} >
+              {/* activeClassName={headerStyles.activelink} -- older*/}
+              <Link to={link.link} >
                 {link.name}
               </Link>
             </li>
