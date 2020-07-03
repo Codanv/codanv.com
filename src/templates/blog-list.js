@@ -23,8 +23,8 @@ export default class BlogList extends React.Component {
         
           {posts.map(({ node }) => {
             return (
-                <ol className={blogListStyles.posts}>
-                  <li key={node.fields.slug} className={blogListStyles.post}>
+                <ol key={node.fields.slug} className={blogListStyles.posts}>
+                  <li className={blogListStyles.post}>
                     <Link
                       style={{ boxShadow: "none",  }}
                       to={`/posts/${node.fields.slug}`}

@@ -114,7 +114,7 @@ module.exports = {
         extensions: [`.md`, `.mdx`],
         // plugins: [
           gatsbyRemarkPlugins: [
-          `gatsby-remark-prismjs`,
+          // `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {

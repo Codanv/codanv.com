@@ -37,6 +37,22 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
               categories
             }
           }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
         }
       }
       tagsGroup: allMdx(limit: 2000) {
@@ -61,12 +77,14 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = res.data.postsRemark.edges
 
   // Create post detail pages
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node, next, previous }) => {
     createPage({
       path: `/posts${node.fields.slug}`,
       component: blogTemplate,
       context: {
         slug: node.fields.slug,
+        next,
+        previous
       },
     })
   })
