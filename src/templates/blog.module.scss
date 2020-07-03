@@ -48,4 +48,28 @@ blockquote {
     margin-left:0;
     margin-right: 0;
     overflow: auto;
+    box-shadow: 0.5rem 0.5rem 1rem #000000;
+}
+
+img {
+    box-shadow: 0.5rem 0.5rem 1rem #000000;
+}
+
+.postNavigation {
+ 
+    display: flex;
+    margin: 3rem 0;
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    box-shadow: 0.5rem 0.5rem 1rem #000000;
+         
+}
+
+@media screen and (max-width: 600px) {
+    .postNavigation {
+        flex-direction: column;
+
+    }
 }

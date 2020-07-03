@@ -102,8 +102,8 @@ export default class Blog extends React.Component {
           />
 
 
-          <div style={{display: `flex`, margin: `3rem 0`}}>
-            <div style={{justifySelf: `flex-start`}}>{prevPost}</div>
+          <div className={blogStyles.postNavigation}>
+            <div style={{justifySelf: `flex-start`, flex: `1`}}>{prevPost}</div>
             <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
           </div>
 

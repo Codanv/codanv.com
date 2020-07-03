@@ -32,7 +32,7 @@ const Header = () => {
     <header className={headerStyles.header}>
 
       <div className={headerStyles.logo}>
-        <Link to="/" style={{background: `#ffffff`, padding: `0.2rem`, borderRadius: `0.2rem`}}>
+        <Link to="/" style={{textShadow: `0.2rem 0.2rem 0.3rem #000000`}}>
           {/* <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} /> */}
           <span style={{color: `#d0644d`}}>Co</span><span style={{color: `#6c9254`}}>d</span><span style={{color: `#f1b148`}}>an</span><span style={{color: `#41a7ec`}}>v</span>
         </Link>
