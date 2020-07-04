@@ -21,27 +21,25 @@ const IndexPage = ({
       <Head title="Home" lang="en" canonical="https://www.codanv.com/" />
       <Layout>
         <>
-          <div className={indexStyles.intro}>
+          <div style={{marginBottom: `6rem`}}>
             <h1 className={indexStyles.title}><a className={indexStyles.avi} href="https://twitter.com/Avinashkumar_2" target="_blank"  rel="noopener noreferrer">Avinash Kumar</a></h1>
-         
             <span>Design Code Analyze Visualize</span>
             <hr />
           </div>
 
-          <div className={indexStyles.writing}>
-            <h2>Writing</h2>
+          <div className={indexStyles.section}>
+            <h2 >Writing</h2>
             <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
               {group.map(category => (
-                <li key={category.fieldValue}>
+                <li key={category.fieldValue} style={{marginRight: `1.2rem`}}>
                   <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
-                  <span style={{fontSize: `1.2rem`, marginRight: `1.2rem`}}>{category.fieldValue}</span>
+                  <span>{category.fieldValue}</span>
                   </Link>
+                  <hr />
                 </li>
               ))}
             </ul>
-            <hr />
           </div>
-          
         </>
       </Layout>
     </>
