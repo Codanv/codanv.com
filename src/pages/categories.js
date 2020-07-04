@@ -23,7 +23,7 @@ const CategoriesPage = ({
           {group.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
-          <span style={{fontSize: `1.2rem`, textDecoration: `underline`, marginRight: `1.2rem`}}>{category.fieldValue} ({category.totalCount})</span>
+          <span style={{fontSize: `1.2rem`, marginRight: `1.2rem`}}>{category.fieldValue} ({category.totalCount})</span>
               </Link>
             </li>
           ))}
