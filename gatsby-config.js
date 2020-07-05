@@ -114,28 +114,28 @@ module.exports = {
         extensions: [`.md`, `.mdx`],
         // plugins: [
           gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              numberLines: true,
-              noInlineHighlight: false,
-              languageExtensions: [
-                {
-                  language: "superscript",
-                  extend: "javascript",
-                  definition: {
-                    superscript_types: /(SuperType)/,
-                  },
-                  insertBefore: {
-                    function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
-              ],
-            }
-          },
+          // {
+          //   resolve: `gatsby-remark-prismjs`,
+          //   options: {
+          //     classPrefix: "language-",
+          //     numberLines: true,
+          //     noInlineHighlight: false,
+          //     languageExtensions: [
+          //       {
+          //         language: "superscript",
+          //         extend: "javascript",
+          //         definition: {
+          //           superscript_types: /(SuperType)/,
+          //         },
+          //         insertBefore: {
+          //           function: {
+          //             superscript_keywords: /(superif|superelse)/,
+          //           },
+          //         },
+          //       },
+          //     ],
+          //   }
+          // },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -167,14 +167,14 @@ module.exports = {
         // plugins: [
         gatsbyRemarkPlugins: [
           'gatsby-remark-relative-images',
-          // {
-          //   resolve: `gatsby-remark-highlight-code`,
-          //   options: {
-          //     terminal: 'carbon',
-          //     theme: 'night-owl',
-          //     lineNumbers: true
-          //   }
-          // },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'night-owl',
+              lineNumbers: true
+            }
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {

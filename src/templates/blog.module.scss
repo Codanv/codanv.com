@@ -3,9 +3,8 @@
 }
 
 .date {
-    color: #050505;
-    font-size: .8rem;
-    margin-bottom: 0.5rem;
+    color: #505050;
+    font-size: .7rem;
 }
 
 .content {
@@ -22,7 +21,7 @@
     li {
         margin: 0;
         // display: inline-block;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         .tag {
           margin-right: 1rem;
         }    
@@ -45,14 +44,11 @@ img {
 p > code {
     color: #d0644d;
     font-style: italic;
-    background-color: #ffffff;
-    padding: 0.1rem;
-    border-radius: 0.2rem;
 }
 
 pre {
     box-shadow: 0.5rem 0.5rem 1rem #000000;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;    
 }
 
 .postNavigation {

@@ -47,6 +47,8 @@ After getting installed we need to add `proxy` in `package.json` file of client 
 ```json
 "proxy": "http://localhost:3001"
 ```
+So that file looks like this 
+
 ![Client Package.json File](./client-pkg-json.png)
 
 *Remove all the files from `client/src` directory*
@@ -58,7 +60,8 @@ create `App.js` and `index.js` files in `client/src` directory
 Here is the code for `index.js` where we simply rendering our `App` component
 
 **index.js**
-```jsx
+
+```js
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -100,7 +103,7 @@ Wait...
 What! we need to use hooks. nope! no problem :)
 
 **App.js**
-```jsx
+```js
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -128,7 +131,7 @@ Create a directory `components` in the root of `client/src` directory
 Add `ContactTable.js` file in components directory
 
 **ContactTable.js**
-```jsx
+```js
 import React from "react";
 
 const ContactTable = (props) => {
@@ -184,7 +187,7 @@ Cool :)
 Let's have the user interface for creating contact - add `AddContactForm.js` to the `components` directory
 
 **AddContactForm.js**
-```jsx
+```js
 import React, { useState } from "react";
 
 const AddContactForm = (props) => {
@@ -261,7 +264,7 @@ Add `EditContactForm.js` to the `components` directory, so that we can update co
 This is almost similar as `AddContactForm` 
 
 **EditContactForm.js**
-```jsx 
+```js 
 import React, { useState, useEffect } from "react";
 
 const EditContactForm = (props) => {
@@ -346,7 +349,7 @@ export default EditContactForm;
 Good! We need to add some functions to `App.js` which are passed as props to `ContactTable.js`, `AddContactForm.js` and `EditContactForm.js`
 
 **App.js**
-```jsx
+```js
 import React, { useState, useEffect } from "react";
 
 // importing the components so that we can pass functions as props

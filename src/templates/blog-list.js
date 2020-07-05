@@ -31,7 +31,10 @@ export default class BlogList extends React.Component {
                       >
                       <h3>{node.frontmatter.title}</h3>
                     </Link>
-                      <span className={blogListStyles.titleDetails}>{node.frontmatter.date} · {node.timeToRead} min read </span>
+                      <span className={blogListStyles.titleDetails}>
+                        Published on {node.frontmatter.date}
+                        {/* · {node.timeToRead} min read  */}
+                      </span>
                       <p>{node.frontmatter.description}</p>
                   </li>
                 </ol>
@@ -52,6 +55,8 @@ export default class BlogList extends React.Component {
                 style={{
                   // padding: rhythm(1 / 4),
                   textDecoration: "none",
+                  borderRadius: `0.2rem`,
+                  boxShadow: `0.2rem 0.2rem 0.2rem #000000`,
                   color: i + 1 === currentPage ? "#333333" : "#1ca086",
                   background: i + 1 === currentPage ? "#e4e4e4" : "",
                   padding: "0 0.5rem"
@@ -90,7 +95,6 @@ export const blogListQuery = graphql`
             title
             description
           }
-          timeToRead
         }
       }
     }
@@ -98,3 +102,4 @@ export const blogListQuery = graphql`
 `
 
 //  totalCount -- query
+//  timeToRead -- query
