@@ -1,5 +1,5 @@
 import React from "react"
-import {Link, query} from "gatsby"
+import {Link, graphql} from "gatsby"
 import PropTypes from "prop-types"
 
 // Utilities
