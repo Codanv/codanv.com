@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-// import Prism from "prismjs"
-// import "prismjs/plugins/line-numbers/prism-line-numbers.js"
+import Prism from "prismjs"
+import "prismjs/plugins/line-numbers/prism-line-numbers.js"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
@@ -13,17 +13,19 @@ import Head from "../components/head"
 import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+// import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 // const Blog = (props) => {
 export default class Blog extends React.Component {  
+  
   // useEffect(() => {
   //   // Prism.highlightAll()
   //   deckDeckGoHighlightElement();
   // }, [])
 
   componentDidMount() {
-    deckDeckGoHighlightElement();
+    Prism.highlightAll()
+    // deckDeckGoHighlightElement();
   }
 
   render() {

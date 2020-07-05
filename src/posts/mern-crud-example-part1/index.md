@@ -111,7 +111,7 @@ So your `package.json` looks like the following
 create `server.js` file with following code in the root of `mern-stack-contact-app` project directory
 
 **server.js**
-```javascript
+```javascript {numberLines: true}{3, 4-6}
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
