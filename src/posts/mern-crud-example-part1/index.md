@@ -295,4 +295,4 @@ app.listen(3001, () => {
 
 That's all from server-side!
 
-We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/posst/mern-crud-example-part2) to complete the party 👍
+We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2) to complete the party 👍
