@@ -6,19 +6,19 @@ module.exports = {
     title: 'Codanv',
     description: ` Have the right mindset and specific domain knowledge`,
     author: '@Codanv',
-    siteUrl: `https://www.codanv.com/`,
+    siteUrl: `https://www.codanv.com`,
     menuLinks:[
       {
         name: 'posts',
-        link: '/posts'
+        link: '/posts/'
       },     
       {
         name: 'categories',
-        link: '/categories'
+        link: '/categories/'
       },     
       {
         name: 'tags',
-        link: '/tags'
+        link: '/tags/'
       },          
     ]
   },
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `https://www.codanv.com/`,
+        siteUrl: `https://www.codanv.com`,
       },
     },
     {

@@ -18,11 +18,11 @@ const IndexPage = ({
 
   return (
     <>
-      <Head title="Home" lang="en" canonical="https://www.codanv.com/" />
+      <Head title="Home" lang="en" canonical="https://www.codanv.com" />
       <Layout>
         <>
           <div style={{marginBottom: `6rem`, padding: `0.5rem`}}>
-            <h1 className={indexStyles.title}><a className={indexStyles.avi} href="https://twitter.com/Avinashkumar_2" target="_blank"  rel="noopener noreferrer">Hi, I'm Avinash.</a></h1>
+            <h1 className={indexStyles.title}>Hi, I'm Avinash.</h1>
             <span>Design Code Analyze Visualize</span>
             <hr />
           </div>
