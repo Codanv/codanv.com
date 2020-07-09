@@ -75,7 +75,14 @@ export default class Blog extends React.Component {
           ></div> */}
           <MDXRenderer className={blogStyles.content}>{this.props.data.mdx.body}</MDXRenderer>
 
-          <ul className={blogStyles.tags} style={{marginTop: `6rem`}}>
+          <div className={blogStyles.date}>
+            Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
+            {/* {this.props.data.mdx.timeToRead} min read */}
+          </div>  
+
+          <hr />
+          
+          <ul className={blogStyles.tags} style={{margin: `4rem 0`, textTransform: "uppercase", borderLeft: `0.3rem solid #001221`, padding: `0 1rem`}}>
             {this.props.data.mdx.frontmatter.categories.map(category => {
               return (
                 <li key={category}>
@@ -92,11 +99,6 @@ export default class Blog extends React.Component {
               <Link to="/categories"> All Categories</Link>
             </li>
           </ul>
-
-          <div className={blogStyles.date}>
-            Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
-            {/* {this.props.data.mdx.timeToRead} min read */}
-          </div>  
 
           <User
             writer={this.props.data.mdx.frontmatter.writer}
