@@ -1,5 +1,5 @@
 ---
-title: "MERN CRUD Example - Part 1"
+title: "MERN CRUD Example (Part 1)"
 description: "Backend ~ API"
 canonical: "https://www.codanv.com/posts/mern-crud-example-part1/"
 date: 2020-06-13
