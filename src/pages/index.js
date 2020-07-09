@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {Link, graphql} from "gatsby"
 import PropTypes from "prop-types"
 
@@ -15,6 +15,8 @@ const IndexPage = ({
     allMdx: { group },
   },
 }) => {
+
+  const [contact, setContact] = useState('For business inquires')
 
   return (
     <>
@@ -38,6 +40,13 @@ const IndexPage = ({
                   <hr />
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div className={indexStyles.section}>
+            <h2>Contact</h2>
+            <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
+              <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}</button>
             </ul>
           </div>
         </>

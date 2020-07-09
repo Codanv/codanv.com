@@ -31,10 +31,10 @@ export default class BlogList extends React.Component {
                       >
                       <h3>{node.frontmatter.title}</h3>
                     </Link>
-                      <span className={blogListStyles.titleDetails}>
+                      {/* <span className={blogListStyles.titleDetails}>
                         Published on {node.frontmatter.date}
-                        {/* · {node.timeToRead} min read  */}
-                      </span>
+                        { · {node.timeToRead} min read  }
+                      </span> */}
                       <p>{node.frontmatter.description}</p>
                   </li>
                 </ol>
@@ -90,8 +90,7 @@ export const blogListQuery = graphql`
           fields {
             slug
           }
-          frontmatter {
-            date(formatString: "MMM DD, YYYY")
+          frontmatter {            
             title
             description
           }
@@ -101,5 +100,6 @@ export const blogListQuery = graphql`
   }
 `
 
+//  date(formatString: "MMM DD, YYYY")
 //  totalCount -- query
 //  timeToRead -- query

@@ -53,10 +53,6 @@ export default class Blog extends React.Component {
           canonical={this.props.data.mdx.frontmatter.canonical}
         />
         <Layout>
-          <span className={blogStyles.date}>
-            {this.props.data.mdx.frontmatter.date} ·{" "}
-            {this.props.data.mdx.timeToRead} min read
-          </span>
           <h1 className={blogStyles.title}>
             {this.props.data.mdx.frontmatter.title}
           </h1>
@@ -79,7 +75,7 @@ export default class Blog extends React.Component {
           ></div> */}
           <MDXRenderer className={blogStyles.content}>{this.props.data.mdx.body}</MDXRenderer>
 
-          <ul className={blogStyles.tags}>
+          <ul className={blogStyles.tags} style={{marginTop: `6rem`}}>
             {this.props.data.mdx.frontmatter.categories.map(category => {
               return (
                 <li key={category}>
@@ -96,6 +92,11 @@ export default class Blog extends React.Component {
               <Link to="/categories"> All Categories</Link>
             </li>
           </ul>
+
+          <div className={blogStyles.date}>
+            Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
+            {/* {this.props.data.mdx.timeToRead} min read */}
+          </div>  
 
           <User
             writer={this.props.data.mdx.frontmatter.writer}
@@ -124,7 +125,7 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date(formatString: "MMM DD, Y")
+        lastUpdated(formatString: "MMM DD, Y")
         writer
         handle
         tags
@@ -132,7 +133,7 @@ export const query = graphql`
         canonical
       }
       body
-      timeToRead
     }
   }
 `
+// timeToRead

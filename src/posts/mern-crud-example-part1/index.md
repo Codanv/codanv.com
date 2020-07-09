@@ -3,6 +3,7 @@ title: "MERN CRUD Example - Part 1"
 description: "Backend ~ API"
 canonical: "https://www.codanv.com/posts/mern-crud-example-part1/"
 date: 2020-06-13
+lastUpdated: 2020-07-09
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
 tags: ["mernstack", "backend", "webdev"]
