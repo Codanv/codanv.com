@@ -16,7 +16,7 @@ const IndexPage = ({
   },
 }) => {
 
-  const [contact, setContact] = useState('For business inquires')
+  const [contact, setContact] = useState('View email address')
 
   return (
     <>
@@ -45,9 +45,9 @@ const IndexPage = ({
 
           <div className={indexStyles.section}>
             <h2>Contact</h2>
-            <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
-              <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}</button>
-            </ul>
+            For business inquires: {" "}
+            <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}           
+            </button>
           </div>
         </>
       </Layout>
