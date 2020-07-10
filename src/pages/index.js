@@ -23,10 +23,10 @@ const IndexPage = ({
       <Head title="Home" lang="en" canonical="https://www.codanv.com" />
       <Layout>
         <>
-          <div style={{marginBottom: `6rem`, padding: `0.5rem`}}>
-            <h1 className={indexStyles.title}>Hi, I'm Avinash.</h1>
-            <span>Design Code Analyze Visualize</span>
-            <hr />
+          <div style={{marginBottom: `6rem`, padding: `0.5rem`, textAlign: `center`, height: `30vh`}}>
+            <h1 className={indexStyles.title}>
+            Design Code Analyze Visualize</h1>
+            <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>Get Started</Link>
           </div>
 
           <div className={indexStyles.section}>
