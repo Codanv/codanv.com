@@ -43,7 +43,7 @@ const Header = () => {
           {data.siteNavigation.siteMetadata.menuLinks.map(link => (
             <li
               key={link.name}
-              
+              style={{marginRight: `1rem`}}
             >
               <Link to={link.link} className={headerStyles.link}>
               {/* activeClassName={headerStyles.activelink} -- older*/}
