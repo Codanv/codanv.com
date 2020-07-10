@@ -36,9 +36,7 @@ const Categories = ({ pageContext, data }) => {
                 <Link to={`/posts/${slug}/`}>
                   <h3>{title}</h3>
                 </Link>
-                <span className={blogListStyles.titleDetails}>
-                  {node.frontmatter.date} · {node.timeToRead} min read 
-                </span>
+                
                 <p>{node.frontmatter.description}</p>
               </li>
             )
@@ -88,7 +86,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMM DD, YYYY")
             title
             handle
             description

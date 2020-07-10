@@ -37,7 +37,6 @@ const IndexPage = ({
                   <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
                   <span>{category.fieldValue}</span>
                   </Link>
-                  <hr />
                 </li>
               ))}
             </ul>

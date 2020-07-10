@@ -1,7 +1,6 @@
 
 .header {
     display: flex;
-    padding-bottom: 0.5rem;
     .topnav {
         list-style-type: none;
         display: flex;
@@ -9,8 +8,8 @@
     }
 
     .topnav .link a {
-        padding: 0 0.5rem;
-        display: block;
+        padding: 0;
+        display: inline-block;
     }
 
     // .topnav .link .activelink {

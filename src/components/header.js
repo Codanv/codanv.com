@@ -32,7 +32,7 @@ const Header = () => {
     <header className={headerStyles.header}>
 
       <div className={headerStyles.logo}>
-        <Link to="/">
+        <Link to="/" style={{ border: `none`}} >
           {/* <Img fixed={data.codanvLogo.childImageSharp.fixed} alt={data.siteNavigation.siteMetadata.title} /> */}
           <span style={{color: `#d0644d`}}>Co</span><span style={{color: `#6c9254`}}>d</span><span style={{color: `#f1b148`}}>an</span><span style={{color: `#41a7ec`}}>v</span>
         </Link>
@@ -43,10 +43,10 @@ const Header = () => {
           {data.siteNavigation.siteMetadata.menuLinks.map(link => (
             <li
               key={link.name}
-              className={headerStyles.link}
+              
             >
+              <Link to={link.link} className={headerStyles.link}>
               {/* activeClassName={headerStyles.activelink} -- older*/}
-              <Link to={link.link} >
                 {link.name}
               </Link>
             </li>

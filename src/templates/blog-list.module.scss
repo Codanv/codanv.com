@@ -12,16 +12,17 @@
 .post {
     margin-bottom: 3rem;
     h3 {
-        margin-bottom: 0.4375rem;
-        font-size: 1.2rem;
+       font-size: 1.2rem;
     }
+
     a {
         // background: #e4e4e4;
-        display: block;
+        display: inline-block;
         // padding: 0.5rem;
     }
     p {
         font-size: .8rem;
+        margin-top: 0.4375rem;
         color: #000000;
     }
     .title-details {

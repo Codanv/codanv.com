@@ -69,10 +69,10 @@ export default class Blog extends React.Component {
             })}
           </ul>
 
-          {/* <div
+          <div
             className={blogStyles.content}
             dangerouslySetInnerHTML={{ __html: this.props.data.mdx.html }}
-          ></div> */}
+          ></div>
           <MDXRenderer className={blogStyles.content}>{this.props.data.mdx.body}</MDXRenderer>
 
           <div className={blogStyles.date}>
