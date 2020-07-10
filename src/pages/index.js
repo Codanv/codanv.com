@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {Link, graphql} from "gatsby"
 import PropTypes from "prop-types"
 
@@ -17,6 +17,19 @@ const IndexPage = ({
 }) => {
 
   const [contact, setContact] = useState('View email address')
+  
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "https://avinashkumar.ck.page/09b0399ef4/index.js";
+    script.async = true;
+    
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   return (
     <>
@@ -48,6 +61,8 @@ const IndexPage = ({
             <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}           
             </button>
           </div>
+
+          <script async data-uid="09b0399ef4" src="https://avinashkumar.ck.page/09b0399ef4/index.js"></script>
         </>
       </Layout>
     </>

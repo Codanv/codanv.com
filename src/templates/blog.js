@@ -22,10 +22,18 @@ export default class Blog extends React.Component {
   //   // Prism.highlightAll()
   //   deckDeckGoHighlightElement();
   // }, [])
-
+ 
   componentDidMount() {
     // Prism.highlightAll()
     deckDeckGoHighlightElement();
+
+    const script = document.createElement('script');
+  
+    script.src = "https://avinashkumar.ck.page/09b0399ef4/index.js";
+    script.async = true;
+    
+    document.body.appendChild(script);
+  
   }
 
   render() {
@@ -107,11 +115,12 @@ export default class Blog extends React.Component {
             excerpt="Leraning Enthusiast"
           />
 
-
           <div className={blogStyles.postNavigation}>
             <div style={{justifySelf: `flex-start`, flex: `1`}}>{prevPost}</div>
             <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
           </div>
+
+          <script async data-uid="09b0399ef4" src="https://avinashkumar.ck.page/09b0399ef4/index.js"></script>
 
         </Layout>
       </>
