@@ -11,6 +11,7 @@ import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import User from "../components/user"
+import Signup from "../components/signup"
 import blogStyles from "./blog.module.scss"
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -26,13 +27,6 @@ export default class Blog extends React.Component {
   componentDidMount() {
     // Prism.highlightAll()
     deckDeckGoHighlightElement();
-
-    const script = document.createElement('script');
-  
-    script.src = "https://avinashkumar.ck.page/09b0399ef4/index.js";
-    script.async = true;
-    
-    document.body.appendChild(script);
   
   }
 
@@ -42,14 +36,14 @@ export default class Blog extends React.Component {
    
     const nextPost = next && (
       <Link to={`posts${next.fields.slug}`} >
-        <strong>Next Post</strong> <br/>
+        <strong>Next</strong> <br/>
         {next.frontmatter.title}
       </Link>
     )
 
     const prevPost = previous && (
       <Link to={`posts${previous.fields.slug}`} >
-        <strong>Previous Post</strong> <br/>
+        <strong>Previous</strong> <br/>
         {previous.frontmatter.title}
       </Link>
     )
@@ -114,14 +108,15 @@ export default class Blog extends React.Component {
             handle={this.props.data.mdx.frontmatter.handle}
             excerpt="Leraning Enthusiast"
           />
+          
 
           <div className={blogStyles.postNavigation}>
             <div style={{justifySelf: `flex-start`, flex: `1`}}>{prevPost}</div>
             <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
           </div>
 
-          <script async data-uid="09b0399ef4" src="https://avinashkumar.ck.page/09b0399ef4/index.js"></script>
-
+          <Signup />
+         
         </Layout>
       </>
     )

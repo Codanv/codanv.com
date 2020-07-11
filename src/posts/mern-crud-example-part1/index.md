@@ -6,8 +6,8 @@ date: 2020-06-13
 lastUpdated: 2020-07-09
 writer: 'Avinash Kumar'
 handle: 'https://twitter.com/avinashkumar_2'
-tags: ["mernstack", "backend", "webdev"]
-categories: ["Programming"]
+tags: ["mernstack", "backend", "mongodb"]
+categories: ["Web Development"]
 ---
 
 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.

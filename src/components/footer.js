@@ -33,6 +33,9 @@ const Footer = () => {
             <div>
                 <ul>
                 <li>
+                    <Link to="/contact">Contact</Link>
+                </li>
+                <li>
                     <a href="https://twitter.com/codanv" rel="noopener noreferrer" target="_blank">Twitter</a>
                 </li>
                 <li>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import {Link, graphql} from "gatsby"
 import PropTypes from "prop-types"
 
@@ -16,21 +16,7 @@ const IndexPage = ({
   },
 }) => {
 
-  const [contact, setContact] = useState('View email address')
   
-  useEffect(() => {
-    const script = document.createElement('script');
-  
-    script.src = "https://avinashkumar.ck.page/09b0399ef4/index.js";
-    script.async = true;
-    
-    document.body.appendChild(script);
-  
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
-
   return (
     <>
       <Head title="Home" lang="en" canonical="https://www.codanv.com" />
@@ -39,7 +25,9 @@ const IndexPage = ({
           <div style={{marginBottom: `6rem`, padding: `0.5rem`, textAlign: `center`, height: `30vh`}}>
             <h1 className={indexStyles.title}>
             Design Code Analyze Visualize</h1>
-            <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>Get Started</Link>
+            <a href="https://tinyletter.com/codanv" target="_blank" rel="noreferrer noopener" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1rem`}}>SUBSCRIBE</a>
+
+            <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>Explore</Link>
           </div>
 
           <div className={indexStyles.section}>
@@ -54,15 +42,7 @@ const IndexPage = ({
               ))}
             </ul>
           </div>
-
-          <div className={indexStyles.section}>
-            <h2>Contact</h2>
-            For business inquires: {" "}
-            <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}           
-            </button>
-          </div>
-
-          <script async data-uid="09b0399ef4" src="https://avinashkumar.ck.page/09b0399ef4/index.js"></script>
+        
         </>
       </Layout>
     </>
