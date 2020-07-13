@@ -23,6 +23,12 @@ export default class Blog extends React.Component {
   //   // Prism.highlightAll()
   //   deckDeckGoHighlightElement();
   // }, [])
+
+  // constructor(props){
+  //   super(props)
+  //   // ... constructor
+  //   this.props.data.mdx.body = this.props.data.mdx.body.replace(new RegExp("<pre><code", "g"), '<pre class="line-numbers"><code')
+  // }
  
   componentDidMount() {
     Prism.highlightAll()
