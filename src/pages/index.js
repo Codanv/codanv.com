@@ -31,7 +31,7 @@ const IndexPage = ({
           </div>
 
           <div className={indexStyles.section}>
-            <h2 >Writing</h2>
+            <h2 >Choose your domain</h2>
             <ul style={{listStyleType: `none`, margin: 0, display: `flex`, flexWrap: `wrap`}}>
               {group.map(category => (
                 <li key={category.fieldValue} style={{marginRight: `1.2rem`}}>
