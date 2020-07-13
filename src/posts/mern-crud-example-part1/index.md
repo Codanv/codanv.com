@@ -79,10 +79,8 @@ and add some scripts to start the server in `"scripts"` property
 
 So your `package.json` looks like the following
 
-
 **package.json**
 ```json
-{
   "name": "mern-stack-contact-app",
   "version": "1.0.0",
   "description": "",

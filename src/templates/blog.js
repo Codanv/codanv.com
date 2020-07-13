@@ -71,15 +71,16 @@ export default class Blog extends React.Component {
             })}
           </ul>
 
-          <div
+          {/* <div
             className={blogStyles.content}
             dangerouslySetInnerHTML={{ __html: this.props.data.mdx.html }}
-          ></div>
+          ></div> */}
           <MDXRenderer className={blogStyles.content}>{this.props.data.mdx.body}</MDXRenderer>
 
           <div className={blogStyles.date}>
             Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
             {/* {this.props.data.mdx.timeToRead} min read */}
+            {" • "} Published: {this.props.data.mdx.frontmatter.date}
           </div>  
 
           <hr />
@@ -132,6 +133,7 @@ export const query = graphql`
       frontmatter {
         title
         lastUpdated(formatString: "MMM DD, Y")
+        date(formatString: "MMM DD, Y")
         writer
         handle
         tags
@@ -141,5 +143,5 @@ export const query = graphql`
       body
     }
   }
-`
-// timeToRead
+  `
+  // timeToRead
