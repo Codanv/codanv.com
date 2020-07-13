@@ -10,10 +10,14 @@ tags: ["mernstack", "backend", "mongodb"]
 categories: ["Web Development"]
 ---
 
-<span style={{color: `#6c9254`}}>QUICK SUMMERY</span> 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
+<span style={{color: `#d0644d`}}>QUICK SUMMERY</span> 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
+
+
 
 > [Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)<br />
 > [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
+
+
 
 ## Back-end/server-side (Express/Node/Mongodb)
 
