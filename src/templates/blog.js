@@ -11,7 +11,6 @@ import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import User from "../components/user"
-import Signup from "../components/signup"
 import blogStyles from "./blog.module.scss"
 
 // import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -33,7 +32,14 @@ export default class Blog extends React.Component {
   componentDidMount() {
     Prism.highlightAll()
     // deckDeckGoHighlightElement();
+    
+    const exScript = document.createElement('script');
   
+    exScript.src = "https://codanv.ck.page/09b0399ef4/index.js";
+    exScript.async = true;
+    
+    document.body.appendChild(exScript);
+
   }
 
   render() {
@@ -122,7 +128,8 @@ export default class Blog extends React.Component {
             <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
           </div>
 
-          <Signup />
+          <script async data-uid="09b0399ef4" src="https://codanv.ck.page/09b0399ef4/index.js"></script>
+          
          
         </Layout>
       </>

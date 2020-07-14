@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     // align-items: center;
     // justify-content: space-evenly;
-    margin: 2rem;
+    margin: 1.5rem;
     li {
         margin: 0;
         // display: inline-block;
@@ -39,7 +39,7 @@ blockquote {
 }
 
 img {
-    box-shadow: 0.2rem 0.2rem 0.5rem #000000;
+    box-shadow: 0.2rem 0.2rem 0.5rem #505050;
 }
 
 p > code {
@@ -49,7 +49,7 @@ p > code {
 }
 
 pre {
-    box-shadow: 0.3rem 0.3rem 0.5rem #000000;
+    box-shadow: 0.2rem 0.2rem 0.5rem #505050;
     margin-bottom: 2rem;    
 }
 

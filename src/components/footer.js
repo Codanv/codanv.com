@@ -46,6 +46,9 @@ const Footer = () => {
             <div>
             <ul>
                 <li>
+                    <a href="https://codanv.ck.page/09b0399ef4" target="_blank" rel="noreferrer noopener">SUBSCRIBE</a>
+                </li>
+                <li>
                     <Link to="/rss.xml">RSS</Link>
                 </li>
             </ul>

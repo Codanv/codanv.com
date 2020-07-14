@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {Link, graphql} from "gatsby"
 import PropTypes from "prop-types"
 
@@ -16,6 +16,18 @@ const IndexPage = ({
   },
 }) => {
 
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "https://codanv.ck.page/09b0399ef4/index.js";
+    script.async = true;
+    
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
   
   return (
     <>
@@ -25,7 +37,7 @@ const IndexPage = ({
           <div style={{marginBottom: `6rem`, padding: `0.5rem`, textAlign: `center`, height: `30vh`}}>
             <h1 className={indexStyles.title}>
             Design Code Analyze Visualize</h1>
-            <a href="https://tinyletter.com/codanv" target="_blank" rel="noreferrer noopener" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1rem`}}>SUBSCRIBE</a>
+            <a href="https://codanv.ck.page/09b0399ef4" target="_blank" rel="noreferrer noopener" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1rem`}}>SUBSCRIBE</a>
 
             <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>EXPLORE</Link>
           </div>
@@ -42,6 +54,9 @@ const IndexPage = ({
               ))}
             </ul>
           </div>
+
+          <script async data-uid="09b0399ef4" src="https://codanv.ck.page/09b0399ef4/index.js"></script>
+          
         
         </>
       </Layout>
