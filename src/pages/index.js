@@ -39,7 +39,7 @@ const IndexPage = ({
             Design Code Analyze Visualize</h1>
             <a href="https://codanv.ck.page/09b0399ef4" target="_blank" rel="noreferrer noopener" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1rem`}}>SUBSCRIBE</a>
 
-            <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>EXPLORE</Link>
+            <Link to="/posts" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>EXPLORE ALL</Link>
           </div>
 
           <div className={indexStyles.section}>
