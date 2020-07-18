@@ -45,13 +45,15 @@ img {
 p > code {
     color: #d0644d;
     font-style: italic;
-
+    background: #e4e4e4;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.1rem;
 }
 
 pre {
     box-shadow: 0.2rem 0.2rem 0.5rem #505050;
-    margin-bottom: 2rem;    
 }
+
 
 .postNavigation {
  

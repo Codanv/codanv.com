@@ -21,7 +21,7 @@ categories: ["Web Development"]
 ## Back-end/server-side (Express/Node/Mongodb)
 
 
-In the [first part]((/posts/mern-crud-example-part1)) of the tutorial we are going to create back-end for our basic contact web application.
+In the [first part](/posts/mern-crud-example-part1) of the tutorial we are going to create back-end for our basic contact web application.
 
 *At the end of [part2](/posts/mern-crud-example-part2) we'll have source code of the project.*
 
