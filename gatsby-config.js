@@ -4,22 +4,18 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Codanv',
-    description: `Design Code Analyze Visualize`,
+    description: `design code analyse visualize`,
     author: '@Codanv',
     siteUrl: `https://www.codanv.com`,
     menuLinks:[
       {
-        name: 'posts',
+        name: 'blog',
         link: '/posts/'
-      },     
+      },   
       {
-        name: 'categories',
-        link: '/categories/'
-      },     
-      {
-        name: 'tags',
-        link: '/tags/'
-      },          
+        name: 'podcasts',
+        link: '/podcasts/'
+      }                 
     ]
   },
   plugins: [
