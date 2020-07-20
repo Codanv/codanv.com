@@ -88,14 +88,6 @@ export default class Blog extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.data.mdx.html }}
           ></div> */}
           <MDXRenderer className={blogStyles.content}>{this.props.data.mdx.body}</MDXRenderer>
-
-          <div className={blogStyles.date}>
-            Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
-            {/* {this.props.data.mdx.timeToRead} min read */}
-            {" • "} Published: {this.props.data.mdx.frontmatter.date}
-          </div>  
-
-          <hr />
           
           <ul className={blogStyles.tags} style={{margin: `4rem 0`, textTransform: "uppercase", borderLeft: `0.3rem solid #001221`, padding: `0 1rem`}}>
             {this.props.data.mdx.frontmatter.categories.map(category => {
@@ -115,6 +107,16 @@ export default class Blog extends React.Component {
             </li>
           </ul>
 
+          <script async data-uid="09b0399ef4" src="https://codanv.ck.page/09b0399ef4/index.js"></script>
+
+          <p>Sharing is caring :)</p>  
+          <div className={blogStyles.date}>
+            Last Updated: {this.props.data.mdx.frontmatter.lastUpdated}
+            {/* {this.props.data.mdx.timeToRead} min read */}
+            {" • "} Published: {this.props.data.mdx.frontmatter.date}
+            <hr />
+          </div>  
+
           <User
             writer={this.props.data.mdx.frontmatter.writer}
             // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
@@ -127,9 +129,6 @@ export default class Blog extends React.Component {
             <div style={{justifySelf: `flex-start`, flex: `1`}}>{prevPost}</div>
             <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
           </div>
-
-          <script async data-uid="09b0399ef4" src="https://codanv.ck.page/09b0399ef4/index.js"></script>
-          
          
         </Layout>
       </>
