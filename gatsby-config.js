@@ -13,6 +13,10 @@ module.exports = {
         link: '/posts/'
       },   
       {
+        name: 'categories',
+        link: '/categories/'
+      },                 
+      {
         name: 'podcasts',
         link: '/podcasts/'
       }                 
