@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Codanv',
-    description: `design code analyse visualize`,
+    description: `In order to model real-life entities, we need to have the right mindset and specific domain knowledge to design, code, analyse and visualize effectively. Let's continue the endeavour...`,
     author: '@Codanv',
     siteUrl: `https://www.codanv.com`,
     menuLinks:[
