@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://www.codanv.com`,
     menuLinks:[
       {
-        name: 'blog',
+        name: 'posts',
         link: '/posts/'
       },   
       {
@@ -89,8 +89,8 @@ module.exports = {
         ],
       },
     },
-
     `gatsby-plugin-sitemap`,
+   
     {
       resolve: `gatsby-plugin-sass`,
       options: {
