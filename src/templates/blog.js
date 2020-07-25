@@ -128,8 +128,8 @@ export default class Blog extends React.Component {
           
 
           <div className={blogStyles.postNavigation}>
-            <div style={{justifySelf: `flex-start`, flex: `1`}}>{prevPost}</div>
-            <div style={{justifySelf: `flex-end`}}>{nextPost}</div>
+            <div style={{justifySelf: `flex-start`, flex: `1`}}>{nextPost}</div>
+            <div style={{justifySelf: `flex-end`}}>{prevPost}</div>
           </div>
          
         </Layout>
