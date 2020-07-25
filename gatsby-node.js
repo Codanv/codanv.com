@@ -79,7 +79,8 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create post detail pages
   posts.forEach(({ node, next, previous }) => {
     createPage({
-      path: `/posts${node.fields.slug}`,
+      // path: `/posts${node.fields.slug}`,
+      path: `${node.fields.slug}`,
       component: blogTemplate,
       context: {
         slug: node.fields.slug,
@@ -123,7 +124,8 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/posts/` : `/posts/${i + 1}`,
+      // path: i === 0 ? `/posts/` : `/posts/${i + 1}`,
+      path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
       component: path.resolve("./src/templates/blog-list.js"),
       context: {
         limit: postsPerPage,

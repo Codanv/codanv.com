@@ -33,7 +33,7 @@ const Categories = ({ pageContext, data }) => {
             const { title } = node.frontmatter
             return (
               <li key={slug} className={blogListStyles.post} >
-                <Link to={`/posts/${slug}/`}>
+                <Link to={`/${slug}/`}>
                   <h3>{title}</h3>
                 </Link>
                 

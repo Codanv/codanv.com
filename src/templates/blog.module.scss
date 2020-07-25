@@ -39,7 +39,7 @@ blockquote {
 }
 
 img {
-    box-shadow: 0.2rem 0.2rem 0.5rem #505050;
+    box-shadow: 0.2rem 0.2rem 0.3rem #505050;
 }
 
 p > code {
@@ -49,9 +49,9 @@ p > code {
     border-radius: 0.1rem;
 }
 
-pre {
-    box-shadow: 0.2rem 0.2rem 0.5rem #505050;
-}
+// pre {
+//     box-shadow: 0.2rem 0.2rem 0.5rem #505050;
+// }
 
 
 .postNavigation {
@@ -62,8 +62,7 @@ pre {
     padding: 1rem 0.5rem;
     border-radius: 0.2rem;
     font-size: 0.8rem;
-    box-shadow: 0.5rem 0.5rem 1rem #000000;
-         
+    // box-shadow: 0.5rem 0.5rem 1rem #000000;         
 }
 
 @media screen and (max-width: 600px) {

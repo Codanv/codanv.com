@@ -16,10 +16,10 @@ export default class BlogList extends React.Component {
 
     return (
       <>
-        <Head title="All Blog Posts" canonical="https://www.codanv.com/posts/" />  
+        <Head title="All Blog Posts" canonical="https://www.codanv.com/blog/" />  
         <Layout>
         {/* <small className={blogListStyles.totalCount}>{`${totalCount}`}</small> -- old implementation */}
-        <h1 style={{marginBottom: `3rem`}}>All Posts</h1>
+        <h1 style={{marginBottom: `3rem`}}>All Blog Posts</h1>
         
           {posts.map(({ node }) => {
             return (
@@ -27,7 +27,7 @@ export default class BlogList extends React.Component {
                   <li className={blogListStyles.post}>
                     <Link
                       style={{ boxShadow: "none",  }}
-                      to={`/posts/${node.fields.slug}`}
+                      to={`/${node.fields.slug}`}
                       >
                       <h3>{node.frontmatter.title}</h3>
                     </Link>
@@ -43,7 +43,7 @@ export default class BlogList extends React.Component {
 
           <ul className={blogListStyles.pageNavigationList}>
             {!isFirst && (
-              <Link to={`/posts/${prevPage}`} rel="prev">
+              <Link to={`/${prevPage}`} rel="prev">
                 ← Previous Page
               </Link>
             )}
@@ -51,7 +51,7 @@ export default class BlogList extends React.Component {
             {Array.from({ length: numPages }, (_, i) => (
               <Link
                 key={`pagination-number${i + 1}`}
-                to={`/posts/${i === 0 ? "" : i + 1}`}
+                to={`/blog/${i === 0 ? "" : i + 1}`}
                 style={{
                   // padding: rhythm(1 / 4),
                   textDecoration: "none",
@@ -67,7 +67,7 @@ export default class BlogList extends React.Component {
             ))}
 
             {!isLast && (
-              <Link to={`/posts/${nextPage}`} rel="next">
+              <Link to={`/${nextPage}`} rel="next">
                 Next Page →
               </Link>
             )}

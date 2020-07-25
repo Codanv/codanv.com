@@ -1,7 +1,7 @@
 ---
 title: "MERN CRUD Example (Part 1)"
 description: "Backend ~ API"
-canonical: "https://www.codanv.com/posts/mern-crud-example-part1/"
+canonical: "https://www.codanv.com/mern-crud-example-part1/"
 date: 2020-06-13
 lastUpdated: 2020-07-09
 writer: 'Avinash Kumar'
@@ -14,16 +14,16 @@ categories: ["Web Development"]
 **`QUICK SUMMERY`** 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
 
 
-> [Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)<br />
-> [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
+> [Part1: Back-end/server-side (Express/Node/Mongodb)](/mern-crud-example-part1)<br />
+> [Part2: Front-end/client-side (React)](/mern-crud-example-part2)
 
 
 ## Back-end/server-side (Express/Node/Mongodb)
 
 
-In the [first part](/posts/mern-crud-example-part1) of the tutorial we are going to create back-end for our basic contact web application.
+In the [first part](/mern-crud-example-part1) of the tutorial we are going to create back-end for our basic contact web application.
 
-*At the end of [part2](/posts/mern-crud-example-part2) we'll have source code of the project.*
+*At the end of [part2](/mern-crud-example-part2) we'll have source code of the project.*
 
 ![Contact list with create form](./mern-contact-add.png)
 ### Prerequisites
@@ -34,11 +34,13 @@ In the [first part](/posts/mern-crud-example-part1) of the tutorial we are going
 
 ### Initiating the project
 
-Create an empty directory:
+Create an empty directory
 
 ```bash
 $ mkdir mern-stack-contact-app
 ```
+
+<br />
 
 Go to the created directory
 
@@ -46,11 +48,15 @@ Go to the created directory
 $ cd mern-stack-contact-app
 ```
 
+<br />
+
 Finally, Initialize the project
 
 ```bash
 $ npm init -y
 ```
+
+<br />
 
 This will create a `package.json` file in our root of the project directory. It holds config and dependency list of our project.
 
@@ -59,6 +65,8 @@ Install the dependencies
 ```bash
 $ npm install express body-parser cors mongodb concurrently
 ```
+
+<br />
 
 - express ~ web framework of nodejs.
 - body-parser ~ a middleware to parse form data (post, put, delete, etc).
@@ -72,6 +80,8 @@ Install `nodemon` utility to automatically restart the server (as developer depe
 $ npm install -D nodemon
 ```
 
+<br />
+
 Before we start to code 
 
 In `package.json` file 
@@ -83,6 +93,7 @@ and add some scripts to start the server in `"scripts"` property
 So your `package.json` looks like the following
 
 **package.json**
+
 ```json
   "name": "mern-stack-contact-app",
   "version": "1.0.0",
@@ -110,10 +121,14 @@ So your `package.json` looks like the following
 }
 ```
 
-create `server.js` file with following code in the root of `mern-stack-contact-app` project directory
+<br />
+
+create `server.js` file with following code in the root of 
+`mern-stack-contact-app` project directory
 
 **server.js**
-```javascript {numberLines: true}{3, 4-6}
+
+```javascript
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -134,12 +149,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// rest of the code -- we'll back
+// rest of the code -- we'll come back here
 
 app.listen(3001, () => {
   console.log("server is up and running...");
 });
 ```
+
+<br />
 
 Let's run `server.js` (listen the power of nodemon)
 
@@ -147,10 +164,15 @@ Let's run `server.js` (listen the power of nodemon)
 $ npm start devserver
 ```
 
+<br />
+
 ```bash
 server is up and running...
 connected to mongodb server
 ```
+
+<br />
+
 **Cool :)**
 
 So, we have so far
@@ -169,6 +191,7 @@ Okay! Let's create some HTTP endpoints (RESTful api for CRUD Operations) to
 *Let's see snippets for CRUD Operations, Don't worry, we'll add them in server.js later.*
 
 **To Read Contact**
+
 ```js
 app.get("/contacts", (req, res) => {
   db.collection("contacts")
@@ -180,7 +203,10 @@ app.get("/contacts", (req, res) => {
 });
 ```
 
+<br />
+
 **To Create Contact**
+
 ```js
 app.post("/contacts/create", (req, res) => {
   db.collection("contacts").insertOne(req.body, (err) => {
@@ -191,7 +217,10 @@ app.post("/contacts/create", (req, res) => {
 });
 ```
 
+<br />
+
 **To Update Contact**
+
 ```js
 app.put("/contacts/update", (req, res) => {
   const { _id, ...rest } = req.body;
@@ -207,7 +236,10 @@ app.put("/contacts/update", (req, res) => {
 });
 ```
 
+<br />
+
 **To Delete Contact**
+
 ```js
 app.delete("/contacts/delete", (req, res) => {
   db.collection("contacts").deleteOne(
@@ -220,11 +252,14 @@ app.delete("/contacts/delete", (req, res) => {
 });
 ```
 
+<br />
+
 So finally we have created RESTful api for basic contact app 
 
 Here is the complete code of `server.js`
 
 **Server.js**
+
 ```js
 const express = require("express");
 const cors = require("cors");
@@ -295,6 +330,8 @@ app.listen(3001, () => {
 });
 ```
 
+<br />
+
 That's all from server-side!
 
-We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2) to complete the party 👍
+We have contact api, Let's go to front-end [Part2: Front-end/client-side (React)](/mern-crud-example-part2) to complete the party 👍

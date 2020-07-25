@@ -9,8 +9,8 @@ module.exports = {
     siteUrl: `https://www.codanv.com`,
     menuLinks:[
       {
-        name: 'posts',
-        link: '/posts/'
+        name: 'blog',
+        link: '/blog/'
       },   
       {
         name: 'categories',
@@ -58,8 +58,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + `/posts` + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + `/posts` + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })

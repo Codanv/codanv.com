@@ -1,7 +1,7 @@
 ---
 title: "MERN CRUD Example (Part 2)"
 description: "Frontend - UI"
-canonical: "https://www.codanv.com/posts/mern-crud-example-part2/"
+canonical: "https://www.codanv.com/mern-crud-example-part2/"
 date: 2020-06-13
 lastUpdated: 2020-07-09
 writer: 'Avinash Kumar'
@@ -10,17 +10,19 @@ tags: ["mernstack", "react"]
 categories: ["Web Development"]
 ---
 
+
 **`QUICK SUMMERY`** 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
 
-> [Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)<br />
-> [Part2: Front-end/client-side (React)](/posts/mern-crud-example-part2)
+> [Part1: Back-end/server-side (Express/Node/Mongodb)](/mern-crud-example-part1)<br />
+> [Part2: Front-end/client-side (React)](/mern-crud-example-part2)
 
 
 ## Front-end/client-side(React)
 
-In the [second part](/posts/mern-crud-example-part2) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
+In the [second part](/mern-crud-example-part2) of the tutorial we are going to create front-end(user interface) for our basic contact web application.
 
 ![Contact list with update form](./mern-contact-update.png)
+
 ### Prerequisites
 
 [node.js](https://nodejs.org/en/download/)
@@ -35,6 +37,8 @@ From the root of `mern-stack-contact-app` project directory
 $ npx create-react-app client
 ```
 
+<br />
+
 npx will create a react application `client`
 
 > 💡
@@ -43,9 +47,13 @@ npx will create a react application `client`
 After getting installed we need to add `proxy` in `package.json` file of client directory/project.
 
 **Add the property at the end of client/package.json**
+
 ```json
 "proxy": "http://localhost:3001"
 ```
+
+<br />
+
 So that file looks like this 
 
 ![Client Package.json File](./client-pkg-json.png)
@@ -68,6 +76,9 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
+
+<br />
+
 - We are using [skeleton](https://getskeleton.com) css library to style our application.
 
 In order to use skeleton css classes we need to add skeleton cdn to `index.html` in `client/public` directory
@@ -75,6 +86,7 @@ In order to use skeleton css classes we need to add skeleton cdn to `index.html`
 Remove all the files from `client/public` directory and create `index.html` with following code
 
 **index.html**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -93,6 +105,8 @@ Remove all the files from `client/public` directory and create `index.html` with
 </html>
 ```
 
+<br />
+
 Fine!
 
 We're going to get `App` componet 
@@ -102,6 +116,7 @@ Wait...
 What! we need to use hooks. nope! no problem :)
 
 **App.js**
+
 ```js
 import React, { useState, useEffect } from "react";
 
@@ -123,6 +138,8 @@ const App = () => {
 export default App;
 ```
 
+<br />
+
 Let's create a component to display the contact list
 
 Create a directory `components` in the root of `client/src` directory 
@@ -130,6 +147,7 @@ Create a directory `components` in the root of `client/src` directory
 Add `ContactTable.js` file in components directory
 
 **ContactTable.js**
+
 ```js
 import React from "react";
 
@@ -179,6 +197,9 @@ const ContactTable = (props) => {
 export default ContactTable;
 
 ```
+
+<br />
+
 `ContactTable` component accepts props and maps contact list in a tabular format. 
 
 Cool :)
@@ -186,6 +207,7 @@ Cool :)
 Let's have the user interface for creating contact - add `AddContactForm.js` to the `components` directory
 
 **AddContactForm.js**
+
 ```js
 import React, { useState } from "react";
 
@@ -258,11 +280,14 @@ const AddContactForm = (props) => {
 export default AddContactForm;
 ```
 
+<br />
+
 Add `EditContactForm.js` to the `components` directory, so that we can update contact data
 
 This is almost similar as `AddContactForm` 
 
 **EditContactForm.js**
+
 ```js 
 import React, { useState, useEffect } from "react";
 
@@ -344,6 +369,7 @@ const EditContactForm = (props) => {
 export default EditContactForm;
 ```
 
+<br />
 
 Good! We need to add some functions to `App.js` which are passed as props to `ContactTable.js`, `AddContactForm.js` and `EditContactForm.js`
 
@@ -470,6 +496,8 @@ const App = () => {
 export default App;
 ```
 
+<br />
+
 Almost completed!
 
 We need to run back-end and front-end concurrently
@@ -484,10 +512,12 @@ Run the contact application (remember the scripts of `package.json` ~ server-sid
 $ npm run start
 ```
 
+<br />
+
 Congratulations! 👍
 
 
-[Part1: Back-end/server-side (Express/Node/Mongodb)](/posts/mern-crud-example-part1)
+[Part1: Back-end/server-side (Express/Node/Mongodb)](/mern-crud-example-part1)
 
 You can leave a comment **[here](https://twitter.com/avinashkumar_2/status/1271618727855796224)**
 

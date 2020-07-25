@@ -46,15 +46,17 @@ export default class Blog extends React.Component {
     const { previous, next } = this.props.pageContext;
     
    
+    // <Link to={`posts${next.fields.slug}`} >
     const nextPost = next && (
-      <Link to={`posts${next.fields.slug}`} >
+      <Link to={`${next.fields.slug}`} >
         <strong>Next</strong> <br/>
         {next.frontmatter.title}
       </Link>
     )
 
+    {/* <Link to={`posts${previous.fields.slug}`} > */}
     const prevPost = previous && (
-      <Link to={`posts${previous.fields.slug}`} >
+      <Link to={`${previous.fields.slug}`} >
         <strong>Previous</strong> <br/>
         {previous.frontmatter.title}
       </Link>

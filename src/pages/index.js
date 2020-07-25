@@ -38,7 +38,7 @@ const IndexPage = ({
             <h1 className={indexStyles.title}>
             Design Code Analyse Visualize</h1>
           
-            <Link to="/posts/" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1.5rem`}}>Explore all</Link>
+            <Link to="/blog/" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`, marginRight: `1.5rem`}}>Explore All</Link>
 
             <Link to="/tags/" style={{border: `1px solid rgba(0, 0, 0, 0.2)`, padding: `0.5rem 1rem`, borderRadius: `0.2rem`, boxShadow: `0.2rem 0.2rem 0.3rem #000000`}}>Tags</Link>
           </div>
