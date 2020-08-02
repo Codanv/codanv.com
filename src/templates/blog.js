@@ -10,7 +10,7 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import User from "../components/user"
+// import User from "../components/user"
 import blogStyles from "./blog.module.scss"
 
 // import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -54,7 +54,7 @@ export default class Blog extends React.Component {
       </Link>
     )
 
-    {/* <Link to={`posts${previous.fields.slug}`} > */}
+    // <Link to={`posts${previous.fields.slug}`} > 
     const prevPost = previous && (
       <Link to={`${previous.fields.slug}`} >
         <strong>Previous</strong> <br/>

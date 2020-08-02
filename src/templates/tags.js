@@ -87,8 +87,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
-            handle
+            title            
             description
           }
           timeToRead

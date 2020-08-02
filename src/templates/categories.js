@@ -87,9 +87,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            handle
             description
-
           }
         }
       }
