@@ -119,12 +119,12 @@ export default class Blog extends React.Component {
             <hr />
           </div>  
 
-          <User
+          {/* <User
             writer={this.props.data.mdx.frontmatter.writer}
             // avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
             handle={this.props.data.mdx.frontmatter.handle}
             excerpt="Leraning Enthusiast"
-          />
+          /> */}
           
 
           <div className={blogStyles.postNavigation}>
@@ -147,9 +147,7 @@ export const query = graphql`
       frontmatter {
         title
         lastUpdated(formatString: "MMM DD, Y")
-        date(formatString: "MMM DD, Y")
-        writer
-        handle
+        date(formatString: "MMM DD, Y")       
         tags
         categories
         canonical
