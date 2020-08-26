@@ -9,7 +9,7 @@ categories: ["Web Development"]
 ---
 
 
-**`QUICK SUMMERY`** 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create RESTful api for CRUD operations to mongodb server and user interface using React.
+**`QUICK SUMMERY`** 🔹 Building a basic contact web application using MongoDB, Express, React and Node (MERN Stack). Here we'll create an api for CRUD operations to mongodb server and user interface using React.
 
 
 > [Part1: Back-end/server-side (Express/Node/Mongodb)](/mern-crud-example-part1)<br />
@@ -179,7 +179,7 @@ So, we have so far
 
 Server is up and running...
 
-Okay! Let's create some HTTP endpoints (RESTful api for CRUD Operations) to 
+Okay! Let's create some HTTP endpoints (an api for CRUD Operations) to 
  
 - **Create** ~ creating contact record by sending data using HTTP POST request
 - **Read** ~ retrieve the contact list using HTTP GET request
@@ -252,7 +252,7 @@ app.delete("/contacts/delete", (req, res) => {
 
 <br />
 
-So finally we have created RESTful api for basic contact app 
+So finally we have created an api for basic contact app 
 
 Here is the complete code of `server.js`
 
