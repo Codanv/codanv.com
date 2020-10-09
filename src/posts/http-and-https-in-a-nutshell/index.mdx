@@ -1,0 +1,168 @@
+---
+title: "Http and Https in a nutshell"
+description: "HTTP structure and workings"
+canonical: "https://www.codanv.com/http-and-https-in-a-nutshell/"
+date: 2020-10-09
+lastUpdated: 2020-10-09
+tags: ["webintro", "http"]
+categories: ["Internet"]
+---
+
+**`QUICK SUMMERY`** 🔹 Hypertext Transfer Protocol is the set of rules for transferring files (text, graphic images, sound, video, etc) on the [World Wide Web](/world-wide-web-and-its-inception). Sounds Good!😄 
+
+> This is one of article on internet series.
+
+![URL Structure](./http-img.png)
+
+HTTP is the underlying protocol used by the Web to exchange web resources found on web pages. When accessing any web page entering http:// in the beginning of the [URL](/url-structure-in-brief) tells the browser to communicate over HTTP. This protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+
+> Protocal ~ A set of rules and standards.
+
+HTTP is a "stateless" protocol, meaning that every packet can be understood in isolation from any other, without the provision of additional session data. This is the main reason that we need a number of new technologies, including ActiveX, Java, JavaScript and cookies to make website dynamic and reactive to user input.
+
+> The standard port for HTTP connections is port 80.
+
+These days browsers no longer require HTTP in front of the URL since it is the default method of communication. However, it is kept in browsers because of the need to separate protocols such as FTP.
+
+**HTTPS (encrypted HTTP)**
+
+HTTPS, which stands for Hypertext Transfer Protocol Secure, is a protocol for transmitting HTTP over a connection that is encrypted by transport-layer security. HTTPS is used to protect transmitted data from eavesdropping and man-in-the-middle attacks. It's the default protocol for conducting financial transactions on the web.
+
+For example, the URL for Codanv blog is https://www.codanv.com/blog.  when you enter a URL in your browser, this actually sends an HTTP command to the Web server directing it to fetch and transmit the requested Web page. 
+
+> HTTPS uses port 443 to transfer its information.
+
+
+### Difference Between HTTP and HTTPS
+
+* HTTP lacks security mechanism to encrypt the data whereas HTTPS provides Secure Sockets Layer (SSL) or Transport Layer Security (TLS) Digital Certificate to secure the communication between server and client.
+* HTTP operates at Application Layer whereas HTTPS operates at Transport Layer.
+* HTTP by default operates on port 80 whereas HTTPS by default operates on port 443.
+* HTTP transfers data in plain text while HTTPS transfers data in cipher text (encrypt text).
+* HTTP is fast as compared to HTTPS because HTTPS consumes computation power to encrypt the communication channel and increases network overhead.
+* Search Ranking 	HTTP does not improve search rankings. 	HTTPS helps to improve search ranking.
+ 
+
+> Search engines now default to HTTPS connections so anyone on the same Wi-Fi network would  not be able to see your searches, as would your Internet service provider.
+
+### Some HTTP Terminologies
+
+**What’s in an HTTP request?**
+
+Each HTTP request made across the Internet carries with it a series of encoded data that carries different types of information. A typical HTTP request contains:
+
+    * HTTP version type
+    * A URL
+    * An HTTP method
+    * HTTP request headers
+    * Optional HTTP body.
+
+**HTTP Method**
+
+An HTTP method indicates the action that the HTTP request expects from the queried server. Some common http methods are GET, POST, PUT, PATCH, DELETE, etc.
+
+ * ‘GET’ request expects information (web resources) back in return.
+ * ‘POST’ request indicates that the client is submitting information to the web server to create resources.
+ * 'PUT' request used to update web resources completely.
+ * 'PATCH' request used to update web resources partially.
+
+> HTTP method sometimes referred to as an HTTP verb.
+
+**HTTP Request Headers**
+
+HTTP headers contain text information stored in key-value pairs, and they are included in every HTTP request (and response). These headers communicate core information, such as what browser the client is using what data is being requested.
+
+**HTTP request body**
+
+The body of a request is the part that contains the ‘body’ of information the request is transferring. The body of an HTTP request contains any information being submitted to the web server, such as a username and password, or any other data entered into a form.
+
+**HTTP response**
+
+An HTTP response is what web clients (often browsers) receive from an Internet server in answer to an HTTP request. These responses communicate valuable information based on what was asked for in the HTTP request.
+
+**A typical HTTP response contains:**
+
+    * An HTTP status code
+    * HTTP response headers
+    * Optional HTTP body
+
+**HTTP status code**
+
+HTTP status codes are 3-digit codes most often used to indicate whether an HTTP request has been successfully completed. Status codes are broken into the following 5 blocks:
+
+    1xx Informational
+    2xx Success
+    3xx Redirection
+    4xx Client Error
+    5xx Server Error
+
+    The “xx” refers to different numbers between 00 and 99.
+
+**Some Status Codes:** 
+
+* 100 (Continue)
+* 101 (Switch protocols)
+* 102 (Processing)
+* 200 (Success)
+* 201 (Fulfilled)
+* 202 (Accepted)
+* 204 (No content)
+* 205 (Reset content)
+* 206 (Partial content)
+* 207 (Multi-Status)
+
+* 301 (Moved permanently)
+* 302 (Moved temporarily)
+* 304 (Loaded Cached copy)
+* 307 (Internal redirect)
+* 400 (Bad request)
+* 401 (Authorization required)
+* 402 (Payment required)
+* 403 (Forbidden)
+* 404 (Not found)
+* 405 (Method not allowed)
+* 406 (Not acceptable)
+* 407 (Proxy authentication required)
+* 408 (Request timeout)
+* 409 (Conflict)
+* 410 (Gone)
+* 411 (Length required)
+* 412 (Precondition failed)
+* 413 (Request entity too large)
+* 414 (Request URI too large)
+* 415 (Unsupported media type)
+* 416 (Request range not satisfiable)
+* 417 (Expectation failed)
+* 422 (Unprocessable entity)
+* 423 (Locked)
+* 424 (Failed dependency)
+
+* 500 (Internal server error)
+* 501 (Not Implemented)
+* 502 (Bad gateway)
+* 503 (Service unavailable)
+* 504 (Gateway timeout)
+* 505 (HTTP version not supported)
+* 506 (Variant also negotiates)
+* 507 (Insufficient storage)
+* 510 (Not extended)
+
+
+Status codes starting with the number ‘2’ indicate a success. For example, after a client requests a web page, the most commonly seen responses have a status code of ‘200 OK’, indicating that the request was properly completed.
+
+If the response starts with a ‘4’ or a ‘5’ that means there was an error and the webpage will not be displayed. A status code that begins with a ‘4’ indicates a client-side error (It’s very common to encounter a ‘404 NOT FOUND’ status code when making a typo in a URL). A status code beginning in ‘5’ means something went wrong on the server side. Status codes can also begin with a ‘1’ or a ‘3’, which indicate an informational response and a redirect, respectively.
+
+**HTTP response headers**
+
+An HTTP response comes with headers that convey important information such as the language and format of the data being sent in the response body.
+
+**HTTP response body**
+
+Successful HTTP responses to ‘GET’ requests generally have a body which contains the requested information. In most web requests, this is HTML data which a web browser will translate into a web page.
+
+When these requests and responses are being sent, they use TCP/IP to reduce and transport information in small packets of binary sequences of ones and zeros that are physically sent through electric wires, fiber optic cables and wireless networks.
+
+Okay! On this note let's wrap this article you can explore more articles on internet [here](/categories/internet).
+
+<button style={{boxShadow: `0.2rem 0.2rem 0.5rem #000000`}} onClick={() => alert(`200 OK 😊`)}>Request the response 💜</button>
+ 
