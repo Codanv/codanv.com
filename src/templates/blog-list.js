@@ -43,7 +43,7 @@ export default class BlogList extends React.Component {
 
           <ul className={blogListStyles.pageNavigationList}>
             {!isFirst && (
-              <Link to={`/${prevPage}`} rel="prev">
+              <Link to={`/blog/${prevPage}`} rel="prev">
                 ← Previous Page
               </Link>
             )}
@@ -67,7 +67,7 @@ export default class BlogList extends React.Component {
             ))}
 
             {!isLast && (
-              <Link to={`/${nextPage}`} rel="next">
+              <Link to={`/blog/${nextPage}`} rel="next">
                 Next Page →
               </Link>
             )}
