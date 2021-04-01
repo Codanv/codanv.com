@@ -14,7 +14,7 @@ const Contact = () => {
             <h1>Contact</h1>
             <div>
                 For business inquires: {" "}
-                <button onClick={() => {setContact("avinash@codanv.com")}}>{contact}           
+                <button onClick={() => {setContact("contact@codanv.com")}}>{contact}           
                 </button>
             </div>
         </Layout>
