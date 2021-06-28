@@ -16,9 +16,9 @@ const Podcasts = () => {
                     >
                     <h3>S01E01 - Open Source - Series Introduction</h3>
                    </a>
-                    <br />
-                   <iframe src="https://anchor.fm/codanv/embed/episodes/S01E01---Open-Source---Series-Introduction--Codanv-e13ih93" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
-
+                    <p>
+                        <iframe src="https://anchor.fm/codanv/embed/episodes/S01E01---Open-Source---Series-Introduction--Codanv-e13ih93" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                    </p>
                     This series is dedicated to right from contributing, creating to maintaining open source projects in details.
 
                     In this episode there is a list of questions which you can expect to be answered in this series. This is equally beneficial for beginners and experienced learners.
