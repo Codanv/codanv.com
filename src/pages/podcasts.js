@@ -25,6 +25,26 @@ const Podcasts = () => {
 
                     So do listen and share with your friends. keep learning!
                 </p>
+
+                <p>
+                    <a
+                        href="https://anchor.fm/codanv/episodes/S01E02---Open-Source---What-and-Why-e13k9do"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3>S01E02 - Open Source - What and Why</h3>
+                    </a>
+                    <p>
+                        <iframe src="https://anchor.fm/codanv/embed/episodes/S01E02---Open-Source---What-and-Why-e13k9do" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                    </p>
+                    Welcome to `What and Why` episode of `Open Source` series. There are three main concerns discussed in this episode -
+                    <ul>
+                        <li>What does mean to be a open source project?</li>
+                        <li>Is every open source project free of charge?</li>
+                        <li>Why does people opensource their project or work?</li>
+                    </ul>  
+                    liked it! Share  with your friends and colleague.
+                </p>
             </Layout>
         </>
     )
