@@ -10,7 +10,7 @@ const Podcasts = () => {
                 <h1>Podcasts</h1>
                 <p>
                     <a 
-                        href="https://anchor.fm/codanv/episodes/S01E01---Open-Source---Series-Introduction--Codanv-e13ih93"
+                        href="https://open.spotify.com/show/7DKSqNSYfUniEeqOqNOdFj"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -28,7 +28,7 @@ const Podcasts = () => {
 
                 <p>
                     <a
-                        href="https://anchor.fm/codanv/episodes/S01E02---Open-Source---What-and-Why-e13k9do"
+                        href="https://open.spotify.com/show/7DKSqNSYfUniEeqOqNOdFj"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -44,6 +44,25 @@ const Podcasts = () => {
                         <li>Why does people opensource their project or work?</li>
                     </ul>  
                     liked it! Share  with your friends and colleague.
+                </p>
+
+                <p>
+                    <a
+                        href="https://open.spotify.com/show/7DKSqNSYfUniEeqOqNOdFj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3>S01E03 - Open Source - Objectives &amp; Meaning of Contributing for a beginner</h3>
+                    </a>
+                    <p>
+                    <iframe src="https://anchor.fm/codanv/embed/episodes/S01E03---Open-Source---Objectives--Meaning-of-Contributing-for-a-Beginner-Hindi-e13m3d1" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                    </p>
+                    Hello friends! There are two concerns tackled in this episode:  
+                    <ul>
+                        <li>1. Probable objectives of contributing.</li>
+                        <li>2. Initially, How can a beginner start contributing without involving in coding?</li>
+                    </ul>  
+                    Share what have you learned with your friends and family.
                 </p>
             </Layout>
         </>
