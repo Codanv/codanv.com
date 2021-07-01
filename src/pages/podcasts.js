@@ -64,6 +64,21 @@ const Podcasts = () => {
                     </ul>  
                     Share what have you learned with your friends and family.
                 </p>
+
+                <p>
+                    <a
+                        href="https://open.spotify.com/episode/7dWkj19PwBDawYQE6C9fyh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3>E01S04 - Open Source - Anatomy &amp; Choosing a Project to Contribute</h3>
+                    </a>
+                    <p>
+                        <iframe src="https://anchor.fm/codanv/embed/episodes/E01S04---Open-Source---Anatomy--Choosing-a-Project-to-Contribute-e13o5hr" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                    </p>
+                    Welcome Friends! We'll discuss - 1. Internal workings of an open source project and 2. how to choose a project to contribute. 
+                    Share what have you learned with your friends and family.
+                </p>
             </Layout>
         </>
     )
