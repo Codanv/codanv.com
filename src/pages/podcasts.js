@@ -79,6 +79,27 @@ const Podcasts = () => {
                     Welcome Friends! We'll discuss - 1. Internal workings of an open source project and 2. how to choose a project to contribute. 
                     Share what have you learned with your friends and family.
                 </p>
+
+                <p>
+                    <a
+                        href="https://open.spotify.com/episode/3Z2nNOQs8NYhL8zzSTeIk8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3> S01E05 - Open Source - Submitting Contribution &amp; After Contribution</h3>
+                    </a>
+                    <p>
+                        <iframe src="https://anchor.fm/codanv/embed/episodes/S01E05---Open-Source---Submitting-Contributing--After-Contribution-Hindi-e13q1l8" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                       
+                    </p>
+                    Hello Doston! Concerns of this episode are:
+                    <ul>
+                        <li>How to ensure effective communication in open source project community</li>
+                        <li>How to open an issue or pull request effectively</li>
+                        <li>Steps needed to open a pull request</li>
+                        <li>What if you don't get any response after contributing or even rejected </li>
+                    </ul>
+                </p>
             </Layout>
         </>
     )
