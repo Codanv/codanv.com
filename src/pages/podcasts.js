@@ -113,6 +113,20 @@ const Podcasts = () => {
                         <li>Branding</li>
                         </ul>
                 </p>
+
+                <p>
+                    <a
+                        href="https://open.spotify.com/episode/2Fk9GV6ISeHVv4V5OPxiLb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3>S01E07 - Open Source - Finding Users for a Project</h3>
+                    </a>
+                    <p>
+                        <iframe src="https://anchor.fm/codanv/embed/episodes/S01E07---Open-Source---Finding-Users-for-a-Project-Hindi-e13suje" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+                    </p>
+                        Hello Doston! In every open source project, People often involve as a user eventually turns in contributors. So we need to find users for our project. This is what the concern of this episode.
+                </p>
             </Layout>
         </>
     )
