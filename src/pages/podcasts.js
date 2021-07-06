@@ -11,15 +11,15 @@ const Podcasts = () => {
 
                 <p>Available on several platforms</p>
 
-                <a href="https://open.spotify.com/show/7DKSqNSYfUniEeqOqNOdFj" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <p><a href="https://open.spotify.com/show/7DKSqNSYfUniEeqOqNOdFj" target="_blank" rel="noopener noreferrer">Spotify</a></p>
 
-                <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yY2QyZWQ0MC9wb2RjYXN0L3Jzcw==" target="_blank" rel="noopener noreferrer">Google Podcast</a>
+                <p><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yY2QyZWQ0MC9wb2RjYXN0L3Jzcw==" target="_blank" rel="noopener noreferrer">Google Podcast</a></p>
 
-                <a href="https://www.breaker.audio/codanv" target="_blank" rel="noopener noreferrer">Breaker</a>
+                <p><a href="https://www.breaker.audio/codanv" target="_blank" rel="noopener noreferrer">Breaker</a></p>
 
-                <a href="https://radiopublic.com/codanv-WxBxb7" target="_blank" rel="noopener noreferrer">Radio Public</a>
+                <p><a href="https://radiopublic.com/codanv-WxBxb7" target="_blank" rel="noopener noreferrer">Radio Public</a></p>
 
-                <a href="https://anchor.fm/codanv" target="_blank" rel="noopener noreferrer">Anchor</a>
+                <p><a href="https://anchor.fm/codanv" target="_blank" rel="noopener noreferrer">Anchor</a></p>
 
             </Layout>
         </>
