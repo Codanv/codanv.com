@@ -7,7 +7,7 @@ const Podcasts = () => {
         <>
             <Head  title="Podcasts" canonical="https://www.codanv.com/podcasts/" />
             <Layout>
-                <h1>Podcasts <small><a href="https://anchor.fm/s/2cd2ed40/podcast/rss">RSS</a></small></h1>
+                <h1>Podcasts</h1>
 
                 <p>Available on several platforms</p>
 
@@ -21,6 +21,7 @@ const Podcasts = () => {
 
                 <p><a href="https://anchor.fm/codanv" target="_blank" rel="noopener noreferrer">Anchor</a></p>
 
+                <small style={{marginTop: `1rem`}}><a href="https://anchor.fm/s/2cd2ed40/podcast/rss">Podcast RSS</a></small>
             </Layout>
         </>
     )
