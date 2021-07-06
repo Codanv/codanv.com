@@ -21,7 +21,7 @@ const Podcasts = () => {
 
                 <p><a href="https://anchor.fm/codanv" target="_blank" rel="noopener noreferrer">Anchor</a></p>
 
-                <small style={{marginTop: `1rem`}}><a href="https://anchor.fm/s/2cd2ed40/podcast/rss">Podcast RSS</a></small>
+                <small style={{marginTop: `2rem`, fontSize: "0.5rem"}}><a href="https://anchor.fm/s/2cd2ed40/podcast/rss">[Podcast RSS]</a></small>
             </Layout>
         </>
     )
